@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import SmallMovieCard from "~/components/small-movie-card/small-movie-card.jsx";
+import SmallMovieCard from "~/components/small-movie-card/small-movie-card";
 
 const MainPage = (props) => {
   const {filmsList} = props;
@@ -100,7 +100,11 @@ const MainPage = (props) => {
 
           <div className="catalog__movies-list">
             {filmsList.map((film, index) => {
-              return <SmallMovieCard film={film} key={`${film}-${index}`}/>;
+              return <SmallMovieCard
+                film={film}
+                onClick={() => {}}
+                key={`${film}-${index}`}
+              />;
             })}
           </div>
 

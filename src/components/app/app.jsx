@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MainPage from '~/components/main-page/main-page.jsx';
+import MainPage from '~/components/main-page/main-page';
 
 const App = (props) => {
   const {filmsList} = props;
