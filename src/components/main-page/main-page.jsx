@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import SmallMovieCard from "~/components/small-movie-card/small-movie-card";
+import MoviesList from '~/components/movies-list/movies-list';
 
 const MainPage = (props) => {
   const {filmsList} = props;
@@ -98,15 +98,7 @@ const MainPage = (props) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            {filmsList.map((film, index) => {
-              return <SmallMovieCard
-                film={film}
-                onClick={() => {}}
-                key={`${film}-${index}`}
-              />;
-            })}
-          </div>
+          <MoviesList filmsList={filmsList} />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -132,7 +124,10 @@ const MainPage = (props) => {
 };
 
 MainPage.propTypes = {
-  filmsList: PropTypes.array.isRequired
+  filmsList: PropTypes.arrayOf(PropTypes.exact({
+    title: PropTypes.string,
+    image: PropTypes.string
+  })).isRequired
 };
 
 export default MainPage;

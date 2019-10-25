@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '~/components/app/app.jsx';
-import {FILMS} from '~/data/films';
+import {FILMS} from '~/moks/films';
 
 const init = () => {
   ReactDOM.render(
