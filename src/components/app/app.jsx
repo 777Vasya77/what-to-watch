@@ -8,7 +8,10 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  filmsList: PropTypes.array.isRequired
+  filmsList: PropTypes.arrayOf(PropTypes.exact({
+    title: PropTypes.string,
+    image: PropTypes.string
+  })).isRequired
 };
 
 export default App;

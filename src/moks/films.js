@@ -1,8 +1,4 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import App from '~/components/app/app';
-
-const FILMS = [
+export const FILMS = [
   {
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
     image: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
@@ -36,11 +32,3 @@ const FILMS = [
     image: `we-need-to-talk-about-kevin.jpg`
   },
 ];
-
-it(`App component render correctly`, () => {
-  const tree = renderer
-    .create(<App filmsList={FILMS}/>)
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
