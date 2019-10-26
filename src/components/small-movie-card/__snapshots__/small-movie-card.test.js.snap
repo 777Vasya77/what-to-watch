@@ -8,9 +8,9 @@ exports[`SmallMovieCard component render correctly 1`] = `
     className="small-movie-card__image"
   >
     <img
-      alt="Fantastic Beasts: The Crimes of Grindelwald"
+      alt="Macbeth"
       height="175"
-      src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+      src="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
       width="280"
     />
   </div>
@@ -19,10 +19,10 @@ exports[`SmallMovieCard component render correctly 1`] = `
   >
     <a
       className="small-movie-card__link"
-      href="movie-page.html"
+      href="/films#1"
       onMouseEnter={[Function]}
     >
-      Fantastic Beasts: The Crimes of Grindelwald
+      Macbeth
     </a>
   </h3>
 </article>

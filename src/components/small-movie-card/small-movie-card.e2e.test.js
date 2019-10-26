@@ -1,12 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
+import {FILMS} from '~/moks/test-moks';
+import Film from "~/models/film";
 
-const FILM = {
-  title: `Fantastic Beasts: The Crimes of Grindelwald`,
-  image: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
-};
-
+const FILM = new Film(FILMS[0]);
 
 describe(`SmallMovieCard component tests`, () => {
   let wrapper;

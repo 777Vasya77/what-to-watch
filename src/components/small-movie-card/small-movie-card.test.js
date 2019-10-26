@@ -1,11 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
+import {FILMS} from '~/moks/test-moks';
+import Film from "~/models/film";
 
-const FILM = {
-  title: `Fantastic Beasts: The Crimes of Grindelwald`,
-  image: `fantastic-beasts-the-crimes-of-grindelwald.jpg`
-};
+const FILM = new Film(FILMS[0]);
 
 it(`SmallMovieCard component render correctly`, () => {
   const tree = renderer
