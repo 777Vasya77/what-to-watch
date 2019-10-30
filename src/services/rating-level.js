@@ -1,13 +1,14 @@
+const LEVELS = new Map([
+  [{min: 0, max: 3}, `bad`],
+  [{min: 3, max: 5}, `normal`],
+  [{min: 5, max: 8}, `good`],
+  [{min: 8, max: 10}, `very good`],
+  [{min: 10, max: Infinity}, `awesome`],
+]);
+
 class RatingLevel {
   constructor(rating) {
     this.rating = rating;
-    this.levels = new Map([
-      [{min: 0, max: 3}, `bad`],
-      [{min: 3, max: 5}, `normal`],
-      [{min: 5, max: 8}, `good`],
-      [{min: 8, max: 10}, `very good`],
-      [{min: 10, max: Infinity}, `awesome`],
-    ]);
   }
 
   static capitalize(string) {
@@ -19,14 +20,13 @@ class RatingLevel {
   }
 
   getLevel() {
-    let levelTitle;
-    for (let [range, level] of this.levels) {
+    for (let [range, level] of LEVELS) {
       if (this.between(range.min, range.max)) {
-        levelTitle = level;
+        return RatingLevel.capitalize(level);
       }
     }
 
-    return RatingLevel.capitalize(levelTitle);
+    return null;
   }
 }
 

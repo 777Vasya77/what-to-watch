@@ -2,32 +2,46 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
 import {FILMS} from '~/moks/test-moks';
-import Film from "~/models/film";
+import Film from '~/models/film';
 
-const FILM = new Film(FILMS[0]);
+const film = new Film(FILMS[0]);
 
 describe(`SmallMovieCard component tests`, () => {
   let wrapper;
   let mouseEnterHandler;
+  let mouseLeaveHandler;
+
   beforeEach(() => {
     mouseEnterHandler = jest.fn();
+    mouseLeaveHandler = jest.fn();
+
     wrapper = shallow(
         <SmallMovieCard
-          film={FILM}
-          onCardLinkMouseEnter={mouseEnterHandler}
+          film={film}
+          onMovieCardMouseEnter={mouseEnterHandler}
+          onMovieCardMouseLeave={mouseLeaveHandler}
         />
     );
 
-    const cardTitle = wrapper.find(`.small-movie-card__link`).first();
-    cardTitle.simulate(`mouseEnter`);
+    const card = wrapper.find(`article`);
+    card.simulate(`mouseEnter`);
+    card.simulate(`mouseLeave`);
   });
 
-  it(`Check the onClick callback`, () => {
+  it(`Component have one movie card`, () => {
+    expect(wrapper.find(`article`)).toHaveLength(1);
+  });
+
+  it(`Check the onMovieCardMouseEnter callback`, () => {
     expect(mouseEnterHandler).toBeCalledTimes(1);
   });
 
+  it(`Check the onMovieCardMouseLeave callback`, () => {
+    expect(mouseLeaveHandler).toBeCalledTimes(1);
+  });
+
   it(`Check data in callback function`, () => {
-    expect(mouseEnterHandler).toBeCalledWith(FILM);
+    expect(mouseEnterHandler).toBeCalledWith(film);
   });
 });
 

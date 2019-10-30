@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviesList component render correctly 1`] = `
+exports[`MoviesList component tests Component render correctly 1`] = `
 <div
   className="catalog__movies-list"
 >
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Macbeth"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
         width="280"
       />
     </div>
@@ -23,7 +23,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#1"
-        onMouseEnter={[Function]}
       >
         Macbeth
       </a>
@@ -31,14 +30,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Once Upon a Time in America"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/Once_Upon_a_Time_in_America.jpg"
         width="280"
       />
     </div>
@@ -48,7 +47,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#2"
-        onMouseEnter={[Function]}
       >
         Once Upon a Time in America
       </a>
@@ -56,14 +54,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="We need to talk about Kevin"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/we-need-to-talk-about-kevin.jpg"
         width="280"
       />
     </div>
@@ -73,7 +71,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#3"
-        onMouseEnter={[Function]}
       >
         We need to talk about Kevin
       </a>
@@ -81,14 +78,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Dardjeeling Limited"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/dardjeeling_limited.jpg"
         width="280"
       />
     </div>
@@ -98,7 +95,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#4"
-        onMouseEnter={[Function]}
       >
         Dardjeeling Limited
       </a>
@@ -106,14 +102,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="War of the Worlds"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg"
         width="280"
       />
     </div>
@@ -123,7 +119,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#5"
-        onMouseEnter={[Function]}
       >
         War of the Worlds
       </a>
@@ -131,14 +126,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Aviator"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg"
         width="280"
       />
     </div>
@@ -148,7 +143,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#6"
-        onMouseEnter={[Function]}
       >
         Aviator
       </a>
@@ -156,14 +150,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Beach"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg"
         width="280"
       />
     </div>
@@ -173,7 +167,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#7"
-        onMouseEnter={[Function]}
       >
         Beach
       </a>
@@ -181,14 +174,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="A Star Is Born"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg"
         width="280"
       />
     </div>
@@ -198,7 +191,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#8"
-        onMouseEnter={[Function]}
       >
         A Star Is Born
       </a>
@@ -206,14 +198,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Midnight Special"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg"
         width="280"
       />
     </div>
@@ -223,7 +215,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#9"
-        onMouseEnter={[Function]}
       >
         Midnight Special
       </a>
@@ -231,14 +222,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Matrix"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg"
         width="280"
       />
     </div>
@@ -248,7 +239,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#10"
-        onMouseEnter={[Function]}
       >
         Matrix
       </a>
@@ -256,14 +246,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="What We Do in the Shadows"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg"
         width="280"
       />
     </div>
@@ -273,7 +263,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#11"
-        onMouseEnter={[Function]}
       >
         What We Do in the Shadows
       </a>
@@ -281,14 +270,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Johnny English"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg"
         width="280"
       />
     </div>
@@ -298,7 +287,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#12"
-        onMouseEnter={[Function]}
       >
         Johnny English
       </a>
@@ -306,14 +294,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Pulp Fiction"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
         width="280"
       />
     </div>
@@ -323,7 +311,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#13"
-        onMouseEnter={[Function]}
       >
         Pulp Fiction
       </a>
@@ -331,14 +318,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Legend"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg"
         width="280"
       />
     </div>
@@ -348,7 +335,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#14"
-        onMouseEnter={[Function]}
       >
         Legend
       </a>
@@ -356,14 +342,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Moonrise Kingdom"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
         width="280"
       />
     </div>
@@ -373,7 +359,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#15"
-        onMouseEnter={[Function]}
       >
         Moonrise Kingdom
       </a>
@@ -381,14 +366,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Fantastic Beasts: The Crimes of Grindelwald"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg"
         width="280"
       />
     </div>
@@ -398,7 +383,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#16"
-        onMouseEnter={[Function]}
       >
         Fantastic Beasts: The Crimes of Grindelwald
       </a>
@@ -406,14 +390,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Shutter Island"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg"
         width="280"
       />
     </div>
@@ -423,7 +407,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#17"
-        onMouseEnter={[Function]}
       >
         Shutter Island
       </a>
@@ -431,14 +414,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Gangs of new york"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg"
         width="280"
       />
     </div>
@@ -448,7 +431,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#18"
-        onMouseEnter={[Function]}
       >
         Gangs of new york
       </a>
@@ -456,14 +438,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="The Revenant"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg"
         width="280"
       />
     </div>
@@ -473,7 +455,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#19"
-        onMouseEnter={[Function]}
       >
         The Revenant
       </a>
@@ -481,14 +462,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Seven Years in Tibet"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
         width="280"
       />
     </div>
@@ -498,7 +479,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#20"
-        onMouseEnter={[Function]}
       >
         Seven Years in Tibet
       </a>
@@ -506,14 +486,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Bronson"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg"
         width="280"
       />
     </div>
@@ -523,7 +503,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#21"
-        onMouseEnter={[Function]}
       >
         Bronson
       </a>
@@ -531,14 +510,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Orlando"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg"
         width="280"
       />
     </div>
@@ -548,7 +527,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#22"
-        onMouseEnter={[Function]}
       >
         Orlando
       </a>
@@ -556,14 +534,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="No Country for Old Men"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg"
         width="280"
       />
     </div>
@@ -573,7 +551,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#23"
-        onMouseEnter={[Function]}
       >
         No Country for Old Men
       </a>
@@ -581,14 +558,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Snatch"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg"
         width="280"
       />
     </div>
@@ -598,7 +575,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#24"
-        onMouseEnter={[Function]}
       >
         Snatch
       </a>
@@ -606,14 +582,14 @@ exports[`MoviesList component render correctly 1`] = `
   </article>
   <article
     className="small-movie-card catalog__movies-card"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <div
       className="small-movie-card__image"
     >
-      <img
-        alt="Bohemian Rhapsody"
+      <video
         height="175"
-        src="https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg"
         width="280"
       />
     </div>
@@ -623,7 +599,6 @@ exports[`MoviesList component render correctly 1`] = `
       <a
         className="small-movie-card__link"
         href="/films#25"
-        onMouseEnter={[Function]}
       >
         Bohemian Rhapsody
       </a>
