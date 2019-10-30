@@ -10,12 +10,19 @@ class MoviesList extends PureComponent {
       activeMovieCard: {}
     };
 
-    this._handleCardLinkMouseEnter = this._handleCardLinkMouseEnter.bind(this);
+    this._handleMovieCardMouseEnter = this._handleMovieCardMouseEnter.bind(this);
+    this._handleMovieCardMouseLeave = this._handleMovieCardMouseLeave.bind(this);
   }
 
-  _handleCardLinkMouseEnter(film) {
+  _handleMovieCardMouseEnter(film) {
     this.setState({
       activeMovieCard: film
+    });
+  }
+
+  _handleMovieCardMouseLeave() {
+    this.setState({
+      activeMovieCard: {}
     });
   }
 
@@ -24,12 +31,13 @@ class MoviesList extends PureComponent {
 
     return (
       <div className="catalog__movies-list">
-        {filmsList.map((film, index) => {
+        {filmsList.map((film) => {
           return (
             <SmallMovieCard
               film={film}
-              onCardLinkMouseEnter={this._handleCardLinkMouseEnter}
-              key={`${film.name}-${index}`}
+              onMovieCardMouseEnter={this._handleMovieCardMouseEnter}
+              onMovieCardMouseLeave={this._handleMovieCardMouseLeave}
+              key={film.id}
             />
           );
         })}

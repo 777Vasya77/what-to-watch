@@ -8,7 +8,7 @@ const START_INDEX = 0;
 const FILMS_LIMIT = 20;
 
 const init = () => {
-  const parsedFilmsList = Film.parseFilms(FILMS).splice(START_INDEX, FILMS_LIMIT);
+  const parsedFilmsList = Film.parseFilms(FILMS).slice(START_INDEX, FILMS_LIMIT);
   ReactDOM.render(
       <App filmsList={parsedFilmsList} />,
       document.querySelector(`#root`)

@@ -4,12 +4,17 @@ import MoviesList from '~/components/movies-list/movies-list';
 import {FILMS} from '~/moks/test-moks';
 import Film from '~/models/film';
 
-it(`MoviesList component render correctly`, () => {
-  const movies = Film.parseFilms(FILMS);
-  const tree = renderer
-    .create(
-        <MoviesList filmsList={movies}/>
-    ).toJSON();
+const movies = Film.parseFilms(FILMS);
 
-  expect(tree).toMatchSnapshot();
+describe(`MoviesList component tests`, () => {
+  it(`Component render correctly`, () => {
+    const tree = renderer
+      .create(
+          <MoviesList filmsList={movies} />,
+          {createNodeMock: () => ({})}
+      ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
+

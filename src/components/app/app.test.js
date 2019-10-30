@@ -7,7 +7,10 @@ import Film from '~/models/film';
 it(`App component render correctly`, () => {
   const movies = Film.parseFilms(FILMS);
   const tree = renderer
-    .create(<App filmsList={movies}/>)
+    .create(
+        <App filmsList={movies}/>,
+        {createNodeMock: () => ({})}
+    )
     .toJSON();
 
   expect(tree).toMatchSnapshot();

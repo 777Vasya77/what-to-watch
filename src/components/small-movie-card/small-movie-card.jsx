@@ -1,23 +1,65 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import VideoPlayer from '~/components/video-player/video-player';
 
-const SmallMovieCard = (props) => {
-  const {film, onCardLinkMouseEnter} = props;
-  const {name, previewImage} = film;
+const DURATION = 1000;
 
-  const handleCardLinkMouseEnter = () => onCardLinkMouseEnter(film);
+class SmallMovieCard extends PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <article className="small-movie-card catalog__movies-card">
-      <div className="small-movie-card__image">
-        <img src={previewImage} alt={name} width="280" height="175" />
-      </div>
-      <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href={`/films#${film.id}`} onMouseEnter={handleCardLinkMouseEnter}>{name}</a>
-      </h3>
-    </article>
-  );
-};
+    this.state = {
+      isPlaying: false,
+      timerId: 0
+    };
+
+    this._handleMovieCardMouseEnter = this._handleMovieCardMouseEnter.bind(this);
+    this._handleMovieCardMouseLeave = this._handleMovieCardMouseLeave.bind(this);
+  }
+
+  _handleMovieCardMouseEnter() {
+    const {film, onMovieCardMouseEnter} = this.props;
+    onMovieCardMouseEnter(film);
+
+    const timerId = setTimeout(() => {
+      this.setState({isPlaying: true});
+    }, DURATION);
+
+    this.setState({timerId});
+  }
+
+  _handleMovieCardMouseLeave() {
+    const {onMovieCardMouseLeave} = this.props;
+
+    clearTimeout(this.state.timerId);
+    onMovieCardMouseLeave();
+    this.setState({isPlaying: false});
+  }
+
+  render() {
+    const {film} = this.props;
+    const {name, previewImage, previewVideoLink} = film;
+
+    return (
+      <article
+        className="small-movie-card catalog__movies-card"
+        onMouseEnter={this._handleMovieCardMouseEnter}
+        onMouseLeave={this._handleMovieCardMouseLeave}
+      >
+        <div className="small-movie-card__image">
+          <VideoPlayer
+            src={previewVideoLink}
+            isPlaying={this.state.isPlaying}
+            previewImage={previewImage}
+          />
+        </div>
+        <h3 className="small-movie-card__title">
+          <a className="small-movie-card__link" href={`/films#${film.id}`}>{name}</a>
+        </h3>
+      </article>
+    );
+  }
+}
 
 SmallMovieCard.propTypes = {
   film: PropTypes.exact({
@@ -39,7 +81,8 @@ SmallMovieCard.propTypes = {
     videoLink: PropTypes.string,
     previewVideoLink: PropTypes.string,
   }).isRequired,
-  onCardLinkMouseEnter: PropTypes.func.isRequired
+  onMovieCardMouseEnter: PropTypes.func.isRequired,
+  onMovieCardMouseLeave: PropTypes.func.isRequired,
 };
 
 export default SmallMovieCard;
