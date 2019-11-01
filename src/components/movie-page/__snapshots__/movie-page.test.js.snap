@@ -170,7 +170,9 @@ Array [
               >
                 <a
                   className="movie-nav__link"
-                  href="?id=1&tab=overview"
+                  data-tab-name="overview"
+                  href="#overview"
+                  onClick={[Function]}
                 >
                   Overview
                 </a>
@@ -180,7 +182,9 @@ Array [
               >
                 <a
                   className="movie-nav__link"
-                  href="?id=1&tab=details"
+                  data-tab-name="details"
+                  href="#details"
+                  onClick={[Function]}
                 >
                   Details
                 </a>
@@ -190,7 +194,9 @@ Array [
               >
                 <a
                   className="movie-nav__link"
-                  href="?id=1&tab=reviews"
+                  data-tab-name="reviews"
+                  href="#reviews"
+                  onClick={[Function]}
                 >
                   Reviews
                 </a>

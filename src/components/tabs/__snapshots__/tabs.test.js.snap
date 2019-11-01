@@ -9,17 +9,21 @@ exports[`Tabs component tests Component render correctly 1`] = `
   >
     <a
       className="movie-nav__link"
-      href="?id=1&tab=overview"
+      data-tab-name="overview"
+      href="#overview"
+      onClick={[Function]}
     >
       Overview
     </a>
   </li>
   <li
-    className="movie-nav__item movie-nav__item--active"
+    className="movie-nav__item false"
   >
     <a
       className="movie-nav__link"
-      href="?id=1&tab=details"
+      data-tab-name="details"
+      href="#details"
+      onClick={[Function]}
     >
       Details
     </a>
@@ -29,7 +33,9 @@ exports[`Tabs component tests Component render correctly 1`] = `
   >
     <a
       className="movie-nav__link"
-      href="?id=1&tab=reviews"
+      data-tab-name="reviews"
+      href="#reviews"
+      onClick={[Function]}
     >
       Reviews
     </a>

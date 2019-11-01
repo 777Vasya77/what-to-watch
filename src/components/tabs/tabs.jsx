@@ -2,18 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tabs = (props) => {
-  const {activeTabName, filmId} = props;
+  const {activeTabName, onTabChange} = props;
+
   const tabs = [
-    {name: `Overview`, link: `?id=${filmId}&tab=overview`},
-    {name: `Details`, link: `?id=${filmId}&tab=details`},
-    {name: `Reviews`, link: `?id=${filmId}&tab=reviews`},
+    {name: `overview`, link: `#overview`},
+    {name: `details`, link: `#details`},
+    {name: `reviews`, link: `#reviews`},
   ];
+
+  const handleTabChange = (evt) => {
+    const tabName = evt.target.dataset.tabName;
+    onTabChange(tabName);
+  };
+
+  const capitalizeTabName = (name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  };
 
   return (
     <ul className="movie-nav__list">
       {tabs.map(({name, link}) => (
         <li key={name} className={`movie-nav__item ${name === activeTabName && `movie-nav__item--active`}`}>
-          <a href={link} className="movie-nav__link">{name}</a>
+          <a href={link} className="movie-nav__link" data-tab-name={name} onClick={handleTabChange}>{capitalizeTabName(name)}</a>
         </li>
       ))}
     </ul>
@@ -22,7 +32,7 @@ const Tabs = (props) => {
 
 Tabs.propTypes = {
   activeTabName: PropTypes.string.isRequired,
-  filmId: PropTypes.number.isRequired,
+  onTabChange: PropTypes.func.isRequired,
 };
 
 export default Tabs;
