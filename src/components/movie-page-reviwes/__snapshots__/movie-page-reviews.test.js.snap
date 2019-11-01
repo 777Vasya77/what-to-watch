@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MoviePage component tests Component render correctly 1`] = `
+exports[`MoviePageReviews component tests Component render correctly 1`] = `
 Array [
   <section
     className="movie-card movie-card--full"
@@ -166,7 +166,7 @@ Array [
               className="movie-nav__list"
             >
               <li
-                className="movie-nav__item movie-nav__item--active"
+                className="movie-nav__item false"
               >
                 <a
                   className="movie-nav__link"
@@ -186,7 +186,7 @@ Array [
                 </a>
               </li>
               <li
-                className="movie-nav__item false"
+                className="movie-nav__item movie-nav__item--active"
               >
                 <a
                   className="movie-nav__link"
@@ -198,52 +198,248 @@ Array [
             </ul>
           </nav>
           <div
-            className="movie-rating"
+            className="movie-card__reviews movie-card__row"
           >
             <div
-              className="movie-rating__score"
+              className="movie-card__reviews-col"
             >
-              3,3
+              <div
+                className="review"
+              >
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    Poised to be an instant classic, almost everything about this film is phenomenal - the acting, the cinematography, the discography, etc.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Sophie
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-18"
+                    >
+                      October 18, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  2,0
+                </div>
+              </div>
+              <div
+                className="review"
+              >
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    A movie that will take you to another world full of emotions.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Corey
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-02"
+                    >
+                      October 2, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  5,0
+                </div>
+              </div>
+              <div
+                className="review"
+              >
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    I personally found this movie to be boring. Definitely one of the most boring movies I've ever seen.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Sophie
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-20"
+                    >
+                      October 20, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  5,0
+                </div>
+              </div>
+              <div
+                className="review"
+              >
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    Unfortunately we don't have a reliable way to tell the true ratings of a movie.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Zak
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-26"
+                    >
+                      October 26, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  3,0
+                </div>
+              </div>
             </div>
-            <p
-              className="movie-rating__meta"
+            <div
+              className="movie-card__reviews-col"
             >
-              <span
-                className="movie-rating__level"
+              <div
+                className="review"
               >
-                Normal
-              </span>
-              <span
-                className="movie-rating__count"
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    This movie really touched my heart, it really is the best movie of the year and everyone should see this masterpiece.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Mollie
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-29"
+                    >
+                      October 29, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  2,0
+                </div>
+              </div>
+              <div
+                className="review"
               >
-                48798
-                 ratings
-              </span>
-            </p>
-          </div>
-          <div
-            className="movie-card__text"
-          >
-            <p>
-              Macbeth, the Thane of Glamis, receives a prophecy from a trio of witches that one day he will become King of Scotland. Consumed by ambition and spurred to action by his wife, Macbeth murders his king and takes the throne for himself.
-            </p>
-            <p
-              className="movie-card__director"
-            >
-              <strong>
-                Director: 
-                Justin Kurzel
-              </strong>
-            </p>
-            <p
-              className="movie-card__starring"
-            >
-              <strong>
-                Starring: 
-                Michael Fassbender, Marion Cotillard, Jack Madigan
-                 and other
-              </strong>
-            </p>
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    This movie is perfect in all its categories: credits, sound track, production, casting, writing, photography, editing, acting, and direction.
+I was amazed with the freedom of the use of the camera. This movie will change the way movies are made. Slow-mo, stills, black and white, and color were all used to brilliant effect.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Sophie
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-27"
+                    >
+                      October 27, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  4,0
+                </div>
+              </div>
+              <div
+                className="review"
+              >
+                <blockquote
+                  className="review__quote"
+                >
+                  <p
+                    className="review__text"
+                  >
+                    I personally found this movie to be boring. Definitely one of the most boring movies I've ever seen.
+                  </p>
+                  <footer
+                    className="review__details"
+                  >
+                    <cite
+                      className="review__author"
+                    >
+                      Corey
+                    </cite>
+                    <time
+                      className="review__date"
+                      dateTime="2019-10-20"
+                    >
+                      October 20, 2019
+                    </time>
+                  </footer>
+                </blockquote>
+                <div
+                  className="review__rating"
+                >
+                  5,0
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -275,7 +275,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#1"
+              href="/films?id=1"
             >
               Macbeth
             </a>
@@ -299,7 +299,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#2"
+              href="/films?id=2"
             >
               Once Upon a Time in America
             </a>
@@ -323,7 +323,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#3"
+              href="/films?id=3"
             >
               We need to talk about Kevin
             </a>
@@ -347,7 +347,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#4"
+              href="/films?id=4"
             >
               Dardjeeling Limited
             </a>
@@ -371,7 +371,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#5"
+              href="/films?id=5"
             >
               War of the Worlds
             </a>
@@ -395,7 +395,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#6"
+              href="/films?id=6"
             >
               Aviator
             </a>
@@ -419,7 +419,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#7"
+              href="/films?id=7"
             >
               Beach
             </a>
@@ -443,7 +443,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#8"
+              href="/films?id=8"
             >
               A Star Is Born
             </a>
@@ -467,7 +467,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#9"
+              href="/films?id=9"
             >
               Midnight Special
             </a>
@@ -491,7 +491,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#10"
+              href="/films?id=10"
             >
               Matrix
             </a>
@@ -515,7 +515,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#11"
+              href="/films?id=11"
             >
               What We Do in the Shadows
             </a>
@@ -539,7 +539,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#12"
+              href="/films?id=12"
             >
               Johnny English
             </a>
@@ -563,7 +563,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#13"
+              href="/films?id=13"
             >
               Pulp Fiction
             </a>
@@ -587,7 +587,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#14"
+              href="/films?id=14"
             >
               Legend
             </a>
@@ -611,7 +611,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#15"
+              href="/films?id=15"
             >
               Moonrise Kingdom
             </a>
@@ -635,7 +635,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#16"
+              href="/films?id=16"
             >
               Fantastic Beasts: The Crimes of Grindelwald
             </a>
@@ -659,7 +659,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#17"
+              href="/films?id=17"
             >
               Shutter Island
             </a>
@@ -683,7 +683,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#18"
+              href="/films?id=18"
             >
               Gangs of new york
             </a>
@@ -707,7 +707,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#19"
+              href="/films?id=19"
             >
               The Revenant
             </a>
@@ -731,7 +731,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#20"
+              href="/films?id=20"
             >
               Seven Years in Tibet
             </a>
@@ -755,7 +755,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#21"
+              href="/films?id=21"
             >
               Bronson
             </a>
@@ -779,7 +779,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#22"
+              href="/films?id=22"
             >
               Orlando
             </a>
@@ -803,7 +803,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#23"
+              href="/films?id=23"
             >
               No Country for Old Men
             </a>
@@ -827,7 +827,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#24"
+              href="/films?id=24"
             >
               Snatch
             </a>
@@ -851,7 +851,7 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="/films#25"
+              href="/films?id=25"
             >
               Bohemian Rhapsody
             </a>

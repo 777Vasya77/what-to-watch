@@ -1,11 +1,35 @@
 import React, {Fragment} from 'react';
+import MovieCardHero from '~/components/movie-card-hero/movie-card-hero';
 import PropTypes from 'prop-types';
 import Tabs from '~/components/tabs/tabs';
-import MovieCardHero from '~/components/movie-card-hero/movie-card-hero';
 import MoviesList from "~/components/movies-list/movies-list";
 
-const MoviePage = (props) => {
-  const {film, similarFilms} = props;
+const Column = {
+  LEFT: `left`,
+  RIGHT: `right`,
+};
+
+const MoviePageReviews = (props) => {
+  const {film, comments, similarFilms} = props;
+
+  const commentsRender = (column) => {
+    const n = (column === Column.RIGHT) ? 1 : 0;
+
+    return comments.map((comment, index) => index % 2 === n && (
+      <div className="review" key={comment.id}>
+        <blockquote className="review__quote">
+          <p className="review__text">{comment.body}</p>
+
+          <footer className="review__details">
+            <cite className="review__author">{comment.user.name}</cite>
+            <time className="review__date" dateTime={comment.dateTime}>{comment.formattedDate}</time>
+          </footer>
+        </blockquote>
+
+        <div className="review__rating">{comment.ratingWithComma}</div>
+      </div>
+    ));
+  };
 
   return (
     <Fragment>
@@ -22,25 +46,18 @@ const MoviePage = (props) => {
             <div className="movie-card__desc">
               <nav className="movie-nav movie-card__nav">
                 <Tabs
-                  activeTabName={`Overview`}
+                  activeTabName={`Reviews`}
                   filmId={film.id}
                 />
               </nav>
 
-              <div className="movie-rating">
-                <div className="movie-rating__score">{film.ratingWithComma}</div>
-                <p className="movie-rating__meta">
-                  <span className="movie-rating__level">{film.ratingLevel}</span>
-                  <span className="movie-rating__count">{film.scoresCount} ratings</span>
-                </p>
-              </div>
-
-              <div className="movie-card__text">
-                <p>{film.description}</p>
-
-                <p className="movie-card__director"><strong>Director: {film.director}</strong></p>
-
-                <p className="movie-card__starring"><strong>Starring: {film.starringString} and other</strong></p>
+              <div className="movie-card__reviews movie-card__row">
+                <div className="movie-card__reviews-col">
+                  {commentsRender(Column.LEFT)}
+                </div>
+                <div className="movie-card__reviews-col">
+                  {commentsRender(Column.RIGHT)}
+                </div>
               </div>
             </div>
           </div>
@@ -72,7 +89,7 @@ const MoviePage = (props) => {
   );
 };
 
-MoviePage.propTypes = {
+MoviePageReviews.propTypes = {
   film: PropTypes.exact({
     id: PropTypes.number,
     name: PropTypes.string,
@@ -92,6 +109,15 @@ MoviePage.propTypes = {
     videoLink: PropTypes.string,
     previewVideoLink: PropTypes.string,
   }).isRequired,
+  comments: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+    rating: PropTypes.number.isRequired,
+    body: PropTypes.string.isRequired,
+    date: PropTypes.instanceOf(Date).isRequired,
+  })).isRequired,
   similarFilms: PropTypes.arrayOf(PropTypes.exact({
     id: PropTypes.number,
     name: PropTypes.string,
@@ -113,4 +139,4 @@ MoviePage.propTypes = {
   })).isRequired,
 };
 
-export default MoviePage;
+export default MoviePageReviews;

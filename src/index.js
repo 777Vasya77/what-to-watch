@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '~/components/app/app.jsx';
 import {FILMS} from '~/moks/films';
-import Film from "~/models/film";
+import Film from '~/models/film';
 
 const START_INDEX = 0;
 const FILMS_LIMIT = 20;

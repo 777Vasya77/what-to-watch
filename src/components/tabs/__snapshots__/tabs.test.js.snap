@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs component tests Component render correctly 1`] = `
+<ul
+  className="movie-nav__list"
+>
+  <li
+    className="movie-nav__item false"
+  >
+    <a
+      className="movie-nav__link"
+      href="?id=1&tab=overview"
+    >
+      Overview
+    </a>
+  </li>
+  <li
+    className="movie-nav__item movie-nav__item--active"
+  >
+    <a
+      className="movie-nav__link"
+      href="?id=1&tab=details"
+    >
+      Details
+    </a>
+  </li>
+  <li
+    className="movie-nav__item false"
+  >
+    <a
+      className="movie-nav__link"
+      href="?id=1&tab=reviews"
+    >
+      Reviews
+    </a>
+  </li>
+</ul>
+`;

@@ -4,7 +4,7 @@ import Tabs from '~/components/tabs/tabs';
 import MovieCardHero from '~/components/movie-card-hero/movie-card-hero';
 import MoviesList from "~/components/movies-list/movies-list";
 
-const MoviePage = (props) => {
+const MoviePageDetails = (props) => {
   const {film, similarFilms} = props;
 
   return (
@@ -22,25 +22,39 @@ const MoviePage = (props) => {
             <div className="movie-card__desc">
               <nav className="movie-nav movie-card__nav">
                 <Tabs
-                  activeTabName={`Overview`}
+                  activeTabName={`Details`}
                   filmId={film.id}
                 />
               </nav>
 
-              <div className="movie-rating">
-                <div className="movie-rating__score">{film.ratingWithComma}</div>
-                <p className="movie-rating__meta">
-                  <span className="movie-rating__level">{film.ratingLevel}</span>
-                  <span className="movie-rating__count">{film.scoresCount} ratings</span>
-                </p>
-              </div>
+              <div className="movie-card__text movie-card__row">
+                <div className="movie-card__text-col">
+                  <p className="movie-card__details-item">
+                    <strong className="movie-card__details-name">Director</strong>
+                    <span className="movie-card__details-value">{film.director}</span>
+                  </p>
+                  <p className="movie-card__details-item">
+                    <strong className="movie-card__details-name">Starring</strong>
+                    <span className="movie-card__details-value">
+                      {film.starringList}
+                    </span>
+                  </p>
+                </div>
 
-              <div className="movie-card__text">
-                <p>{film.description}</p>
-
-                <p className="movie-card__director"><strong>Director: {film.director}</strong></p>
-
-                <p className="movie-card__starring"><strong>Starring: {film.starringString} and other</strong></p>
+                <div className="movie-card__text-col">
+                  <p className="movie-card__details-item">
+                    <strong className="movie-card__details-name">Run Time</strong>
+                    <span className="movie-card__details-value">{film.convertRunTime}</span>
+                  </p>
+                  <p className="movie-card__details-item">
+                    <strong className="movie-card__details-name">Genre</strong>
+                    <span className="movie-card__details-value">{film.genre}</span>
+                  </p>
+                  <p className="movie-card__details-item">
+                    <strong className="movie-card__details-name">Released</strong>
+                    <span className="movie-card__details-value">{film.released}</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -72,7 +86,7 @@ const MoviePage = (props) => {
   );
 };
 
-MoviePage.propTypes = {
+MoviePageDetails.propTypes = {
   film: PropTypes.exact({
     id: PropTypes.number,
     name: PropTypes.string,
@@ -113,4 +127,4 @@ MoviePage.propTypes = {
   })).isRequired,
 };
 
-export default MoviePage;
+export default MoviePageDetails;
