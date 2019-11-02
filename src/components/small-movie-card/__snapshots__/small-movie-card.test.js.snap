@@ -19,7 +19,7 @@ exports[`SmallMovieCard component render correctly 1`] = `
   >
     <a
       className="small-movie-card__link"
-      href="/films#1"
+      href="/films?id=1"
     >
       Macbeth
     </a>

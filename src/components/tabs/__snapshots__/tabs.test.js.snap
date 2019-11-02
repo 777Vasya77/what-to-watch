@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs component tests Component render correctly 1`] = `
+<ul
+  className="movie-nav__list"
+>
+  <li
+    className="movie-nav__item false"
+  >
+    <a
+      className="movie-nav__link"
+      data-tab-name="overview"
+      href="#overview"
+      onClick={[Function]}
+    >
+      Overview
+    </a>
+  </li>
+  <li
+    className="movie-nav__item false"
+  >
+    <a
+      className="movie-nav__link"
+      data-tab-name="details"
+      href="#details"
+      onClick={[Function]}
+    >
+      Details
+    </a>
+  </li>
+  <li
+    className="movie-nav__item false"
+  >
+    <a
+      className="movie-nav__link"
+      data-tab-name="reviews"
+      href="#reviews"
+      onClick={[Function]}
+    >
+      Reviews
+    </a>
+  </li>
+</ul>
+`;

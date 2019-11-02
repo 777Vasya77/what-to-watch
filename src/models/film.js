@@ -1,4 +1,5 @@
-import RatingLevel from "~/services/rating-level";
+import RatingService from '~/services/rating-service';
+import timeConverterService from '~/services/time-converter-service';
 
 class Film {
   constructor(data) {
@@ -21,6 +22,10 @@ class Film {
     this.previewVideoLink = data[`preview_video_link`];
   }
 
+  getRatingService() {
+    return new RatingService(this.rating);
+  }
+
   static parseFilm(data) {
     return new Film(data);
   }
@@ -30,18 +35,23 @@ class Film {
   }
 
   get ratingWithComma() {
-    return this.rating
-      .toFixed(1)
-      .toString()
-      .replace(`.`, `,`);
+    return this.getRatingService().getConvertRating();
   }
 
   get ratingLevel() {
-    return new RatingLevel(this.rating).getLevel();
+    return this.getRatingService().getLevel();
   }
 
   get starringString() {
     return this.starring.join(`, `);
+  }
+
+  get starringList() {
+    return this.starring.join(`,\n`);
+  }
+
+  get convertRunTime() {
+    return timeConverterService(this.runTime);
   }
 
 }

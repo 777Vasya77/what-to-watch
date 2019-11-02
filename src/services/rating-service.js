@@ -6,7 +6,7 @@ const LEVELS = new Map([
   [{min: 10, max: Infinity}, `awesome`],
 ]);
 
-class RatingLevel {
+class RatingService {
   constructor(rating) {
     this.rating = rating;
   }
@@ -22,12 +22,19 @@ class RatingLevel {
   getLevel() {
     for (let [range, level] of LEVELS) {
       if (this.between(range.min, range.max)) {
-        return RatingLevel.capitalize(level);
+        return RatingService.capitalize(level);
       }
     }
 
     return null;
   }
+
+  getConvertRating() {
+    return this.rating
+      .toFixed(1)
+      .toString()
+      .replace(`.`, `,`);
+  }
 }
 
-export default RatingLevel;
+export default RatingService;
