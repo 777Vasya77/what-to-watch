@@ -5,10 +5,16 @@ import {FILMS} from '~/moks/test-moks';
 import Film from '~/models/film';
 
 it(`MainPage component render correctly`, () => {
+  const genres = [`1`, `2`];
   const movies = Film.parseFilms(FILMS);
   const tree = renderer
     .create(
-        <MainPage filmsList={movies} />,
+        <MainPage
+          filmsList={movies}
+          activeGenreFilter={genres[0]}
+          genres={genres}
+          onGenreLinkClick={jest.fn()}
+        />,
         {createNodeMock: () => ({})}
     ).toJSON();
 

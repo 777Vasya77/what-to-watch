@@ -1,9 +1,12 @@
 import React, {Fragment} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import MainPage from '~/components/main-page/main-page';
 import MoviePage from '~/components/movie-page/movie-page';
 import {COMMENTS} from '~/moks/comments';
 import Comment from '~/models/comment';
+import * as filmsSelectors from '~/reducers/films/films';
+import * as actions from '~/actions/films/films';
 
 const START_INDEX = 0;
 const SIMILAR_MOVIES_LIMIT = 4;
@@ -20,10 +23,15 @@ const getSimilarMovies = (currentMovie, movieList) => {
 };
 
 const getPageScreen = (propsData) => {
-  const {filmsList} = propsData;
+  const {filmsList, genres, activeGenreFilter, onGenreLinkClick} = propsData;
   switch (location.pathname) {
     case `/`:
-      return <MainPage filmsList={filmsList}/>;
+      return <MainPage
+        filmsList={filmsList}
+        genres={genres}
+        activeGenreFilter={activeGenreFilter}
+        onGenreLinkClick={onGenreLinkClick}
+      />;
     case `/films`:
       const movie = filmsList.find((film) => film.id === +search.get(`id`));
       const similarMovies = getSimilarMovies(movie, filmsList).slice(START_INDEX, SIMILAR_MOVIES_LIMIT);
@@ -56,7 +64,22 @@ App.propTypes = {
     isFavorite: PropTypes.bool,
     videoLink: PropTypes.string,
     previewVideoLink: PropTypes.string,
-  })).isRequired
+  })).isRequired,
+  genres: PropTypes.array.isRequired,
+  activeGenreFilter: PropTypes.string.isRequired,
+  onGenreLinkClick: PropTypes.func.isRequired,
 };
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  onGenreLinkClick: (filter) => dispatch(actions.setGenreFilter(filter))
+});
+
+const mapStateToProps = (state) => ({
+  genres: state.films.genres,
+  filmsList: filmsSelectors.getFilmsByGenre(state),
+  activeGenreFilter: filmsSelectors.getActiveGenre(state),
+});
+
+export {App};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,0 +1,1 @@
+export const SET_GENRE_FILTER = `SET_GENRE_FILTER`;

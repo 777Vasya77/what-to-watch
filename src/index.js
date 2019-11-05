@@ -1,16 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '~/components/app/app.jsx';
-import {FILMS} from '~/moks/films';
-import Film from '~/models/film';
-
-const START_INDEX = 0;
-const FILMS_LIMIT = 20;
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import rootReducer from '~/reducers/reducers';
 
 const init = () => {
-  const parsedFilmsList = Film.parseFilms(FILMS).slice(START_INDEX, FILMS_LIMIT);
+  /* eslint-disable no-underscore-dangle */
+  const store = createStore(
+      rootReducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
+  );
+  /* eslint-enable */
+
   ReactDOM.render(
-      <App filmsList={parsedFilmsList} />,
+      <Provider store={store}>
+        <App />
+      </Provider>,
       document.querySelector(`#root`)
   );
 };
