@@ -26,6 +26,7 @@ Array [
       >
         <a
           className="logo__link"
+          href="/"
         >
           <span
             className="logo__letter logo__letter--1"
@@ -780,16 +781,6 @@ Array [
           </h3>
         </article>
       </div>
-      <div
-        className="catalog__more"
-      >
-        <button
-          className="catalog__button"
-          type="button"
-        >
-          Show more
-        </button>
-      </div>
     </section>
     <footer
       className="page-footer"
@@ -799,6 +790,7 @@ Array [
       >
         <a
           className="logo__link logo__link--light"
+          href="main.html"
         >
           <span
             className="logo__letter logo__letter--1"

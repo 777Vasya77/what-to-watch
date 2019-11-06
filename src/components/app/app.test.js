@@ -1,23 +1,27 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {App} from '~/components/app/app';
-import {FILMS} from '~/moks/test-moks';
-import Film from '~/models/film';
+import App from '~/components/app/app';
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+
+const initialState = {
+  films: {
+    filmsList: [],
+    genres: [],
+    activeGenreFilter: ``
+  }
+};
+
+const reducer = (state = initialState) => state;
 
 it(`App component render correctly`, () => {
-  const movies = Film.parseFilms(FILMS);
-  const genres = [`1`, `2`];
   const tree = renderer
     .create(
-        <App
-          filmsList={movies}
-          activeGenreFilter={genres[0]}
-          genres={genres}
-          onGenreLinkClick={jest.fn()}
-        />,
+        <Provider store={createStore(reducer)}>
+          <App />
+        </Provider>,
         {createNodeMock: () => ({})}
-    )
-    .toJSON();
+    ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
