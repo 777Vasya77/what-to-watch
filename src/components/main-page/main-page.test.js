@@ -14,6 +14,8 @@ it(`MainPage component render correctly`, () => {
           activeGenreFilter={genres[0]}
           genres={genres}
           onGenreLinkClick={jest.fn()}
+          onShowMoreClick={jest.fn()}
+          isAllFilmsLoaded={true}
         />,
         {createNodeMock: () => ({})}
     ).toJSON();

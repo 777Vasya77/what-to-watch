@@ -1,29 +1,24 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {App} from '~/components/app/app';
-import {FILMS} from '~/moks/test-moks';
-import Film from '~/models/film';
+import App from '~/components/app/app';
 import {Provider} from "react-redux";
+import {createStore} from "redux";
 
-const createFakeStore = (state) => ({
-  default: () => {},
-  subscribe: () => {},
-  dispatch: () => {},
-  getState: () => (Object.assign({}, state))
-});
+const initialState = {
+  films: {
+    filmsList: [],
+    genres: [],
+    activeGenreFilter: ``
+  }
+};
+
+const reducer = (state = initialState) => state;
 
 it(`App component render correctly`, () => {
-  const store = createFakeStore({
-    films: {
-      genres: [],
-      activeGenreFilter: ``
-    }
-  });
-  const movies = Film.parseFilms(FILMS);
   const tree = renderer
     .create(
-        <Provider store={store}>
-          <App filmsList={movies} />
+        <Provider store={createStore(reducer)}>
+          <App />
         </Provider>,
         {createNodeMock: () => ({})}
     ).toJSON();

@@ -10,7 +10,15 @@ import * as actions from '~/actions/films/films';
 import * as filmsSelectors from '~/reducers/films/films';
 
 const MainPage = (props) => {
-  const {filmsList, genres, activeGenreFilter, onGenreLinkClick} = props;
+  const {
+    filmsList,
+    genres,
+    activeGenreFilter,
+    onGenreLinkClick,
+    onShowMoreClick,
+    isAllFilmsLoaded
+  } = props;
+
   return (
     <Fragment>
       <section className="movie-card">
@@ -66,7 +74,7 @@ const MainPage = (props) => {
 
           <MoviesList filmsList={filmsList} />
 
-          <ShowMore />
+          {!isAllFilmsLoaded && <ShowMore onShowMoreClick={onShowMoreClick}/>}
         </section>
 
         <PageFooter />
@@ -98,15 +106,22 @@ MainPage.propTypes = {
   genres: PropTypes.array.isRequired,
   activeGenreFilter: PropTypes.string.isRequired,
   onGenreLinkClick: PropTypes.func.isRequired,
+  onShowMoreClick: PropTypes.func.isRequired,
+  isAllFilmsLoaded: PropTypes.bool.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onGenreLinkClick: (filter) => dispatch(actions.setGenreFilter(filter))
+  onGenreLinkClick: (filter) => {
+    dispatch(actions.setGenreFilter(filter));
+    dispatch(actions.resetFilmsPerPage());
+  },
+  onShowMoreClick: (perPage) => dispatch(actions.setFilmsPerPage(perPage))
 });
 
 const mapStateToProps = (state) => ({
   genres: state.films.genres,
   activeGenreFilter: filmsSelectors.getActiveGenre(state),
+  isAllFilmsLoaded: filmsSelectors.getIsAllFilmsLoaded(state)
 });
 
 export {MainPage};
