@@ -26,6 +26,7 @@ Array [
       >
         <a
           className="logo__link"
+          href="/"
         >
           <span
             className="logo__letter logo__letter--1"
@@ -152,30 +153,7 @@ Array [
       </h2>
       <ul
         className="catalog__genres-list"
-      >
-        <li
-          className="catalog__genres-item catalog__genres-item--active"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-            onClick={[Function]}
-          >
-            1
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item false"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-            onClick={[Function]}
-          >
-            2
-          </a>
-        </li>
-      </ul>
+      />
       <div
         className="catalog__movies-list"
       >
@@ -799,6 +777,7 @@ Array [
       >
         <a
           className="logo__link logo__link--light"
+          href="main.html"
         >
           <span
             className="logo__letter logo__letter--1"

@@ -3,21 +3,30 @@ import renderer from 'react-test-renderer';
 import {App} from '~/components/app/app';
 import {FILMS} from '~/moks/test-moks';
 import Film from '~/models/film';
+import {Provider} from "react-redux";
+
+const createFakeStore = (state) => ({
+  default: () => {},
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => (Object.assign({}, state))
+});
 
 it(`App component render correctly`, () => {
+  const store = createFakeStore({
+    films: {
+      genres: [],
+      activeGenreFilter: ``
+    }
+  });
   const movies = Film.parseFilms(FILMS);
-  const genres = [`1`, `2`];
   const tree = renderer
     .create(
-        <App
-          filmsList={movies}
-          activeGenreFilter={genres[0]}
-          genres={genres}
-          onGenreLinkClick={jest.fn()}
-        />,
+        <Provider store={store}>
+          <App filmsList={movies} />
+        </Provider>,
         {createNodeMock: () => ({})}
-    )
-    .toJSON();
+    ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

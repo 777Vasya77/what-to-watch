@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MainPage from '~/components/main-page/main-page';
+import {MainPage} from '~/components/main-page/main-page';
 import {FILMS} from '~/moks/test-moks';
 import Film from '~/models/film';
 

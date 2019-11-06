@@ -1,7 +1,13 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import MoviesList from '~/components/movies-list/movies-list';
-import GenresList from "~/components/genres-list/genres-list";
+import GenresList from '~/components/genres-list/genres-list';
+import PageHeader from '~/components/page-header/page-header';
+import PageFooter from '~/components/page-footer/page-footer';
+import ShowMore from '~/components/show-more/show-more';
+import * as actions from '~/actions/films/films';
+import * as filmsSelectors from '~/reducers/films/films';
 
 const MainPage = (props) => {
   const {filmsList, genres, activeGenreFilter, onGenreLinkClick} = props;
@@ -14,21 +20,7 @@ const MainPage = (props) => {
 
         <h1 className="visually-hidden">WTW</h1>
 
-        <header className="page-header movie-card__head">
-          <div className="logo">
-            <a className="logo__link">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
-          <div className="user-block">
-            <div className="user-block__avatar">
-              <img src="img/avatar.jpg" alt="User avatar" width="63" height="63" />
-            </div>
-          </div>
-        </header>
+        <PageHeader />
 
         <div className="movie-card__wrap">
           <div className="movie-card__info">
@@ -74,24 +66,10 @@ const MainPage = (props) => {
 
           <MoviesList filmsList={filmsList} />
 
-          <div className="catalog__more">
-            <button className="catalog__button" type="button">Show more</button>
-          </div>
+          <ShowMore />
         </section>
 
-        <footer className="page-footer">
-          <div className="logo">
-            <a className="logo__link logo__link--light">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
-          <div className="copyright">
-            <p>© 2019 What to watch Ltd.</p>
-          </div>
-        </footer>
+        <PageFooter />
       </div>
     </Fragment>
   );
@@ -122,4 +100,16 @@ MainPage.propTypes = {
   onGenreLinkClick: PropTypes.func.isRequired,
 };
 
-export default MainPage;
+const mapDispatchToProps = (dispatch) => ({
+  onGenreLinkClick: (filter) => dispatch(actions.setGenreFilter(filter))
+});
+
+const mapStateToProps = (state) => ({
+  genres: state.films.genres,
+  activeGenreFilter: filmsSelectors.getActiveGenre(state),
+});
+
+export {MainPage};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
+

@@ -1,4 +1,4 @@
-import films from '~/reducers/films/films';
+import films, {getFilmsByGenre} from '~/reducers/films/films';
 import {SET_GENRE_FILTER} from "~/actions/films/action-types";
 
 const INITIAL_STATE = {
@@ -12,5 +12,14 @@ describe(`Reducer work correctly`, () => {
     })).toEqual({
       activeGenreFilter: `Other genre`
     });
+  });
+
+  it(`Selector getFilmsByGenre work correctly`, () => {
+    expect(getFilmsByGenre({
+      films: {
+        filmsList: [{genre: `test`}, {genre: `test-1`}],
+        activeGenreFilter: `test`,
+      }
+    })).toEqual([{genre: `test`}]);
   });
 });
