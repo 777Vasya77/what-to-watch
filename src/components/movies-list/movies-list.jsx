@@ -2,15 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
 
+const DURATION = 1000;
+let timerId;
+
 const MoviesList = (props) => {
-  const {filmsList, onChangeActiveItem} = props;
+  const {filmsList, activeItem: activeFilm, onChangeActiveItem} = props;
 
   const handleMovieCardMouseEnter = (film) => {
-    onChangeActiveItem(film);
+    timerId = setTimeout(() => {
+      onChangeActiveItem(film);
+    }, DURATION);
   };
 
   const handleMovieCardMouseLeave = () => {
     onChangeActiveItem(null);
+    clearTimeout(timerId);
   };
 
   return (
@@ -22,6 +28,7 @@ const MoviesList = (props) => {
             onMovieCardMouseEnter={handleMovieCardMouseEnter}
             onMovieCardMouseLeave={handleMovieCardMouseLeave}
             key={film.id}
+            isPlaying={film === activeFilm}
           />
         );
       })}
@@ -29,27 +36,30 @@ const MoviesList = (props) => {
   );
 };
 
+const filmRules = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  posterImage: PropTypes.string,
+  previewImage: PropTypes.string,
+  backgroundImage: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  description: PropTypes.string,
+  rating: PropTypes.number,
+  scoresCount: PropTypes.number,
+  director: PropTypes.string,
+  starring: PropTypes.arrayOf(PropTypes.string),
+  runTime: PropTypes.number,
+  genre: PropTypes.string,
+  released: PropTypes.number,
+  isFavorite: PropTypes.bool,
+  videoLink: PropTypes.string,
+  previewVideoLink: PropTypes.string,
+};
+
 MoviesList.propTypes = {
-  filmsList: PropTypes.arrayOf(PropTypes.exact({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    posterImage: PropTypes.string,
-    previewImage: PropTypes.string,
-    backgroundImage: PropTypes.string,
-    backgroundColor: PropTypes.string,
-    description: PropTypes.string,
-    rating: PropTypes.number,
-    scoresCount: PropTypes.number,
-    director: PropTypes.string,
-    starring: PropTypes.arrayOf(PropTypes.string),
-    runTime: PropTypes.number,
-    genre: PropTypes.string,
-    released: PropTypes.number,
-    isFavorite: PropTypes.bool,
-    videoLink: PropTypes.string,
-    previewVideoLink: PropTypes.string,
-  })).isRequired,
+  filmsList: PropTypes.arrayOf(PropTypes.exact(filmRules)).isRequired,
   onChangeActiveItem: PropTypes.func.isRequired,
+  activeItem: PropTypes.exact(filmRules),
 };
 
 export default MoviesList;

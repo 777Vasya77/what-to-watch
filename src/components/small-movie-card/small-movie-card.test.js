@@ -13,7 +13,7 @@ it(`SmallMovieCard component render correctly`, () => {
           film={film}
           onMovieCardMouseEnter={() => {}}
           onMovieCardMouseLeave={() => {}}
-        />,
+          isPlaying={false}/>,
         {createNodeMock: () => ({})}
     ).toJSON();
 
