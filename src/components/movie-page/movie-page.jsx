@@ -1,4 +1,4 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '~/components/tabs/tabs';
 import MovieCardHero from '~/components/movie-card-hero/movie-card-hero';
@@ -9,70 +9,53 @@ import withActiveItem from "~/hocs/with-active-item/with-active-item";
 
 const MoviesListWrapped = withActiveItem(MoviesList);
 
-class MoviePage extends PureComponent {
-  constructor(props) {
-    super(props);
+const MoviePage = (props) => {
+  const {film, similarFilms, comments, activeItem: activeTab, onChangeActiveItem} = props;
 
-    this.state = {
-      activeTab: this._getInitialActiveState()
-    };
-
-    this._handleTabChange = this._handleTabChange.bind(this);
-  }
-
-  _handleTabChange(activeTab) {
-    this.setState({activeTab});
-  }
-
-  _getInitialActiveState() {
+  const getInitialActiveTab = () => {
     return location.hash.split(`#`).slice(-1)[0] || `overview`;
-  }
+  };
 
-  render() {
-    const {film, similarFilms, comments} = this.props;
-    const {activeTab} = this.state;
+  return (
+    <Fragment>
+      <section className="movie-card movie-card--full" style={{backgroundColor: film.backgroundColor}}>
 
-    return (
-      <Fragment>
-        <section className="movie-card movie-card--full" style={{backgroundColor: film.backgroundColor}}>
+        <MovieCardHero film={film}/>
 
-          <MovieCardHero film={film}/>
+        <div className="movie-card__wrap movie-card__translate-top">
+          <div className="movie-card__info">
+            <div className="movie-card__poster movie-card__poster--big">
+              <img src={film.posterImage} alt={film.name} width="218" height="327"/>
+            </div>
 
-          <div className="movie-card__wrap movie-card__translate-top">
-            <div className="movie-card__info">
-              <div className="movie-card__poster movie-card__poster--big">
-                <img src={film.posterImage} alt={film.name} width="218" height="327"/>
-              </div>
+            <div className="movie-card__desc">
+              <nav className="movie-nav movie-card__nav">
+                <Tabs
+                  onTabChange={onChangeActiveItem}
+                  activeTabName={activeTab || getInitialActiveTab()}
+                />
+              </nav>
 
-              <div className="movie-card__desc">
-                <nav className="movie-nav movie-card__nav">
-                  <Tabs
-                    onTabChange={this._handleTabChange}
-                    activeTabName={activeTab}
-                  />
-                </nav>
+              <TabContent tab={activeTab || getInitialActiveTab()} film={film} comments={comments}/>
 
-                <TabContent tab={activeTab} film={film} comments={comments}/>
-
-              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <div className="page-content">
+        <section className="catalog catalog--like-this">
+          <h2 className="catalog__title">More like this</h2>
+
+          <MoviesListWrapped filmsList={similarFilms}/>
         </section>
 
-        <div className="page-content">
-          <section className="catalog catalog--like-this">
-            <h2 className="catalog__title">More like this</h2>
+        <PageFooter />
 
-            <MoviesListWrapped filmsList={similarFilms}/>
-          </section>
-
-          <PageFooter />
-
-        </div>
-      </Fragment>
-    );
-  }
-}
+      </div>
+    </Fragment>
+  );
+};
 
 const filmValidateRules = {
   id: PropTypes.number,
@@ -91,7 +74,7 @@ const filmValidateRules = {
   released: PropTypes.number,
   isFavorite: PropTypes.bool,
   videoLink: PropTypes.string,
-  previewVideoLink: PropTypes.string,
+  previewVideoLink: PropTypes.string
 };
 
 MoviePage.propTypes = {
@@ -106,6 +89,8 @@ MoviePage.propTypes = {
     body: PropTypes.string.isRequired,
     date: PropTypes.instanceOf(Date).isRequired,
   })).isRequired,
+  onChangeActiveItem: PropTypes.func.isRequired,
+  activeItem: PropTypes.string,
 };
 
 export default MoviePage;
