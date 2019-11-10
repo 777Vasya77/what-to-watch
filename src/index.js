@@ -8,7 +8,7 @@ import rootReducer from '~/reducers/reducers';
 const init = () => {
   /* eslint-disable no-underscore-dangle */
   const store = createStore(
-      rootReducer,
+      rootReducer, /* preloadedState, */
       window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
   );
   /* eslint-enable */

@@ -8,6 +8,9 @@ import PageFooter from '~/components/page-footer/page-footer';
 import ShowMore from '~/components/show-more/show-more';
 import * as actions from '~/actions/films/films';
 import * as filmsSelectors from '~/reducers/films/films';
+import withActiveItem from '~/hocs/with-active-item/with-active-item';
+
+const MoviesListWrapped = withActiveItem(MoviesList);
 
 const MainPage = (props) => {
   const {
@@ -72,7 +75,7 @@ const MainPage = (props) => {
             onGenreLinkClick={onGenreLinkClick}
           />
 
-          <MoviesList filmsList={filmsList} />
+          <MoviesListWrapped filmsList={filmsList} />
 
           {!isAllFilmsLoaded && <ShowMore onShowMoreClick={onShowMoreClick}/>}
         </section>

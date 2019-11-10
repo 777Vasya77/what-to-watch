@@ -6,24 +6,20 @@ class MoviesList extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {
-      activeMovieCard: {}
-    };
-
     this._handleMovieCardMouseEnter = this._handleMovieCardMouseEnter.bind(this);
     this._handleMovieCardMouseLeave = this._handleMovieCardMouseLeave.bind(this);
   }
 
   _handleMovieCardMouseEnter(film) {
-    this.setState({
-      activeMovieCard: film
-    });
+    const {onChangeActiveItem} = this.props;
+
+    onChangeActiveItem(film);
   }
 
   _handleMovieCardMouseLeave() {
-    this.setState({
-      activeMovieCard: {}
-    });
+    const {onChangeActiveItem} = this.props;
+
+    onChangeActiveItem(null);
   }
 
   render() {
@@ -65,7 +61,8 @@ MoviesList.propTypes = {
     isFavorite: PropTypes.bool,
     videoLink: PropTypes.string,
     previewVideoLink: PropTypes.string,
-  })).isRequired
+  })).isRequired,
+  onChangeActiveItem: PropTypes.func.isRequired,
 };
 
 export default MoviesList;
