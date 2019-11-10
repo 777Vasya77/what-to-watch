@@ -3,6 +3,9 @@
 exports[`VideoPlayer component tests Component render correctly 1`] = `
 <video
   height="175"
+  muted={true}
+  poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
+  src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
   width="280"
 />
 `;
