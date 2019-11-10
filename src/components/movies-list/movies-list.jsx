@@ -1,46 +1,33 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
 
-class MoviesList extends PureComponent {
-  constructor(props) {
-    super(props);
+const MoviesList = (props) => {
+  const {filmsList, onChangeActiveItem} = props;
 
-    this._handleMovieCardMouseEnter = this._handleMovieCardMouseEnter.bind(this);
-    this._handleMovieCardMouseLeave = this._handleMovieCardMouseLeave.bind(this);
-  }
-
-  _handleMovieCardMouseEnter(film) {
-    const {onChangeActiveItem} = this.props;
-
+  const handleMovieCardMouseEnter = (film) => {
     onChangeActiveItem(film);
-  }
+  };
 
-  _handleMovieCardMouseLeave() {
-    const {onChangeActiveItem} = this.props;
-
+  const handleMovieCardMouseLeave = () => {
     onChangeActiveItem(null);
-  }
+  };
 
-  render() {
-    const {filmsList} = this.props;
-
-    return (
-      <div className="catalog__movies-list">
-        {filmsList.map((film) => {
-          return (
-            <SmallMovieCard
-              film={film}
-              onMovieCardMouseEnter={this._handleMovieCardMouseEnter}
-              onMovieCardMouseLeave={this._handleMovieCardMouseLeave}
-              key={film.id}
-            />
-          );
-        })}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="catalog__movies-list">
+      {filmsList.map((film) => {
+        return (
+          <SmallMovieCard
+            film={film}
+            onMovieCardMouseEnter={handleMovieCardMouseEnter}
+            onMovieCardMouseLeave={handleMovieCardMouseLeave}
+            key={film.id}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
 MoviesList.propTypes = {
   filmsList: PropTypes.arrayOf(PropTypes.exact({
