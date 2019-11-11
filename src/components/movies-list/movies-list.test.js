@@ -10,7 +10,10 @@ describe(`MoviesList component tests`, () => {
   it(`Component render correctly`, () => {
     const tree = renderer
       .create(
-          <MoviesList filmsList={movies} />,
+          <MoviesList
+            filmsList={movies}
+            onChangeActiveItem={jest.fn()}
+          />,
           {createNodeMock: () => ({})}
       ).toJSON();
 

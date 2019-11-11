@@ -4,12 +4,14 @@ import MoviePage from '~/components/movie-page/movie-page';
 import {COMMENTS} from '~/moks/comments';
 import Comment from '~/models/comment';
 import {connect} from 'react-redux';
-import * as filmsSelectors from "~/reducers/films/films";
+import * as filmsSelectors from '~/reducers/films/films';
+import withActiveItem from '~/hocs/with-active-item/with-active-item';
 
 const START_INDEX = 0;
 const SIMILAR_MOVIES_LIMIT = 4;
 const search = new URLSearchParams(location.search);
 const comments = Comment.parseComments(COMMENTS);
+const MoviePageWrapped = withActiveItem(MoviePage);
 
 const redirectTo = (url) => {
   location.href = url;
@@ -30,7 +32,7 @@ const getPageScreen = (propsData) => {
       const movie = filmsList.find((film) => film.id === +search.get(`id`));
       const similarMovies = getSimilarMovies(movie, filmsList).slice(START_INDEX, SIMILAR_MOVIES_LIMIT);
 
-      return movie ? <MoviePage film={movie} similarFilms={similarMovies} comments={comments}/> : redirectTo(`/`);
+      return movie ? <MoviePageWrapped film={movie} similarFilms={similarMovies} comments={comments}/> : redirectTo(`/`);
   }
   return redirectTo(`/`);
 };

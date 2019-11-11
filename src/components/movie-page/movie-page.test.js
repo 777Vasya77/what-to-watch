@@ -16,6 +16,7 @@ describe(`MoviePage component tests`, () => {
           film={film}
           similarFilms={similarFilms}
           comments={comments}
+          onChangeActiveItem={jest.fn()}
         />,
         {createNodeMock: () => ({})}
     ).toJSON();

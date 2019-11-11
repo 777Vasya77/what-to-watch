@@ -1,71 +1,65 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
 
-class MoviesList extends PureComponent {
-  constructor(props) {
-    super(props);
+const DURATION = 1000;
+let timerId;
 
-    this.state = {
-      activeMovieCard: {}
-    };
+const MoviesList = (props) => {
+  const {filmsList, activeItem: activeFilm, onChangeActiveItem} = props;
 
-    this._handleMovieCardMouseEnter = this._handleMovieCardMouseEnter.bind(this);
-    this._handleMovieCardMouseLeave = this._handleMovieCardMouseLeave.bind(this);
-  }
+  const handleMovieCardMouseEnter = (film) => {
+    timerId = setTimeout(() => {
+      onChangeActiveItem(film);
+    }, DURATION);
+  };
 
-  _handleMovieCardMouseEnter(film) {
-    this.setState({
-      activeMovieCard: film
-    });
-  }
+  const handleMovieCardMouseLeave = () => {
+    onChangeActiveItem(null);
+    clearTimeout(timerId);
+  };
 
-  _handleMovieCardMouseLeave() {
-    this.setState({
-      activeMovieCard: {}
-    });
-  }
+  return (
+    <div className="catalog__movies-list">
+      {filmsList.map((film) => {
+        return (
+          <SmallMovieCard
+            film={film}
+            onMovieCardMouseEnter={handleMovieCardMouseEnter}
+            onMovieCardMouseLeave={handleMovieCardMouseLeave}
+            key={film.id}
+            isPlaying={film === activeFilm}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
-  render() {
-    const {filmsList} = this.props;
-
-    return (
-      <div className="catalog__movies-list">
-        {filmsList.map((film) => {
-          return (
-            <SmallMovieCard
-              film={film}
-              onMovieCardMouseEnter={this._handleMovieCardMouseEnter}
-              onMovieCardMouseLeave={this._handleMovieCardMouseLeave}
-              key={film.id}
-            />
-          );
-        })}
-      </div>
-    );
-  }
-}
+const filmRules = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  posterImage: PropTypes.string,
+  previewImage: PropTypes.string,
+  backgroundImage: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  description: PropTypes.string,
+  rating: PropTypes.number,
+  scoresCount: PropTypes.number,
+  director: PropTypes.string,
+  starring: PropTypes.arrayOf(PropTypes.string),
+  runTime: PropTypes.number,
+  genre: PropTypes.string,
+  released: PropTypes.number,
+  isFavorite: PropTypes.bool,
+  videoLink: PropTypes.string,
+  previewVideoLink: PropTypes.string,
+};
 
 MoviesList.propTypes = {
-  filmsList: PropTypes.arrayOf(PropTypes.exact({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    posterImage: PropTypes.string,
-    previewImage: PropTypes.string,
-    backgroundImage: PropTypes.string,
-    backgroundColor: PropTypes.string,
-    description: PropTypes.string,
-    rating: PropTypes.number,
-    scoresCount: PropTypes.number,
-    director: PropTypes.string,
-    starring: PropTypes.arrayOf(PropTypes.string),
-    runTime: PropTypes.number,
-    genre: PropTypes.string,
-    released: PropTypes.number,
-    isFavorite: PropTypes.bool,
-    videoLink: PropTypes.string,
-    previewVideoLink: PropTypes.string,
-  })).isRequired
+  filmsList: PropTypes.arrayOf(PropTypes.exact(filmRules)).isRequired,
+  onChangeActiveItem: PropTypes.func.isRequired,
+  activeItem: PropTypes.exact(filmRules),
 };
 
 export default MoviesList;

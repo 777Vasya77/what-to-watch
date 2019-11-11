@@ -20,6 +20,7 @@ describe(`SmallMovieCard component tests`, () => {
           film={film}
           onMovieCardMouseEnter={mouseEnterHandler}
           onMovieCardMouseLeave={mouseLeaveHandler}
+          isPlaying={false}
         />
     );
 
