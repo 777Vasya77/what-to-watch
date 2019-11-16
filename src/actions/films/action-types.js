@@ -1,3 +1,4 @@
 export const SET_GENRE_FILTER = `SET_GENRE_FILTER`;
 export const SET_FILMS_PER_PAGE = `SET_FILMS_PER_PAGE`;
 export const RESET_FILMS_PER_PAGE = `RESET_FILMS_PER_PAGE`;
+export const LOAD_FILMS = `LOAD_FILMS`;

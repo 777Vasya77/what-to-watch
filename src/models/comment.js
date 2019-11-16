@@ -1,5 +1,7 @@
-import RatingService from '~/services/rating-service';
+import {services} from '~/services/services';
 import moment from 'moment';
+
+const {RatingService} = services;
 
 class Comment {
   constructor(data) {

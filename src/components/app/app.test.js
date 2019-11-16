@@ -7,7 +7,6 @@ import {createStore} from "redux";
 const initialState = {
   films: {
     filmsList: [],
-    genres: [],
     activeGenreFilter: ``
   }
 };

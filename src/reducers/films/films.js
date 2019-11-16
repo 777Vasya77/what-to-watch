@@ -1,43 +1,31 @@
-import {FILMS} from '~/moks/films';
-import Film from '~/models/film';
-import {RESET_FILMS_PER_PAGE, SET_FILMS_PER_PAGE, SET_GENRE_FILTER} from '~/actions/films/action-types';
+import * as actions from '~/actions/films/action-types';
 
 const INIT_FILM_PER_PAGE = 8;
 const ALL_GENRES = `All genres`;
-const filmsList = Film.parseFilms(FILMS);
-const activeGenreFilter = ALL_GENRES;
-
-export const getGenres = (films = filmsList) => {
-  const filmsArray = [...new Set(films.map((film) => film.genre))];
-  filmsArray
-    .sort()
-    .unshift(ALL_GENRES);
-
-  return filmsArray;
-};
-
-const genres = getGenres();
 
 const initialState = {
-  filmsList,
-  genres,
-  activeGenreFilter,
+  filmsList: [],
+  activeGenreFilter: ALL_GENRES,
   perPage: INIT_FILM_PER_PAGE
 };
 
 const films = (state = initialState, action = {}) => {
   switch (action.type) {
-    case SET_GENRE_FILTER:
+    case actions.SET_GENRE_FILTER:
       return Object.assign({}, state, {
-        activeGenreFilter: action.filter
+        activeGenreFilter: action.payload
       });
-    case SET_FILMS_PER_PAGE:
+    case actions.SET_FILMS_PER_PAGE:
       return Object.assign({}, state, {
-        perPage: state.perPage + action.perPage
+        perPage: state.perPage + action.payload
       });
-    case RESET_FILMS_PER_PAGE:
+    case actions.RESET_FILMS_PER_PAGE:
       return Object.assign({}, state, {
         perPage: INIT_FILM_PER_PAGE
+      });
+    case actions.LOAD_FILMS:
+      return Object.assign({}, state, {
+        filmsList: action.payload
       });
 
     default:
@@ -46,6 +34,16 @@ const films = (state = initialState, action = {}) => {
 };
 
 // selectors
+export const getGenres = (state) => {
+  const {filmsList} = state.films;
+  const genres = [...new Set(filmsList.map((film) => film.genre))];
+  genres
+    .sort()
+    .unshift(ALL_GENRES);
+
+  return genres;
+};
+
 export const getFilmsByGenre = (state, slice = true) => {
   const {
     activeGenreFilter: activeFilter,

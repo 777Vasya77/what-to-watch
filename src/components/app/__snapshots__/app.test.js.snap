@@ -153,7 +153,19 @@ Array [
       </h2>
       <ul
         className="catalog__genres-list"
-      />
+      >
+        <li
+          className="catalog__genres-item false"
+        >
+          <a
+            className="catalog__genres-link"
+            href="#"
+            onClick={[Function]}
+          >
+            All genres
+          </a>
+        </li>
+      </ul>
       <div
         className="catalog__movies-list"
       />

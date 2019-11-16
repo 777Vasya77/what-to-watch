@@ -1,15 +1,20 @@
-import {RESET_FILMS_PER_PAGE, SET_FILMS_PER_PAGE, SET_GENRE_FILTER} from '~/actions/films/action-types';
+import * as actions from '~/actions/films/action-types';
 
 export const setGenreFilter = (filter) => ({
-  type: SET_GENRE_FILTER,
-  filter
+  type: actions.SET_GENRE_FILTER,
+  payload: filter
 });
 
 export const setFilmsPerPage = (perPage) => ({
-  type: SET_FILMS_PER_PAGE,
-  perPage
+  type: actions.SET_FILMS_PER_PAGE,
+  payload: perPage
 });
 
 export const resetFilmsPerPage = () => ({
-  type: RESET_FILMS_PER_PAGE,
+  type: actions.RESET_FILMS_PER_PAGE,
+});
+
+export const loadFilms = (films) => ({
+  type: actions.LOAD_FILMS,
+  payload: films
 });

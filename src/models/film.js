@@ -1,5 +1,6 @@
-import RatingService from '~/services/rating-service';
-import timeConverterService from '~/services/time-converter-service';
+import {services} from '~/services/services';
+
+const {RatingService, timeConverterService} = services;
 
 class Film {
   constructor(data) {
