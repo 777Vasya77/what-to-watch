@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import GenresList from "~/components/genres-list/genres-list";
+import {GenresList} from "~/components/genres-list/genres-list";
 
 describe(`GenresList component tests`, () => {
   const genres = [`1`, `2`];

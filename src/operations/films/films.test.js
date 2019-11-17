@@ -10,20 +10,19 @@ describe(`Films operations tests`, () => {
       parseFilms: (data) => data
     }));
 
-    const api = createApi();
-
-    const apiMock = new MockAdapter(api);
     const dispatch = jest.fn();
+    const api = createApi(dispatch);
+    const apiMock = new MockAdapter(api);
     const loadFilms = operations.films.loadFilms();
 
     apiMock
       .onGet(`/films`)
       .reply(200, [{films: true}]);
 
-    return loadFilms(dispatch, ``, api)
+    return loadFilms(dispatch, null, api)
       .then(() => {
-        expect(dispatch).toBeCalledTimes(1);
-        expect(dispatch).toHaveBeenNthCalledWith(1, {
+        expect(dispatch).toBeCalledTimes(3);
+        expect(dispatch).toHaveBeenNthCalledWith(2, {
           type: ActionType.LOAD_FILMS,
           payload: Film.parseFilms([{films: true}])
         });

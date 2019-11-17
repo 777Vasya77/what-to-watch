@@ -4,6 +4,8 @@ const ALL_GENRES = `All genres`;
 const filmsSelector = (state) => state.films.filmsList;
 const activeGenreSelector = (state) => state.films.activeGenreFilter;
 const perPageSelector = (state) => state.films.perPage;
+const loading = (state) => state.films.loading;
+const error = (state) => state.films.error;
 
 const genresSelector = createSelector(
     filmsSelector,
@@ -40,11 +42,13 @@ const isAllFilmsLoadedSelector = createSelector(
 );
 
 export const films = {
+  loading,
+  error,
   filmsSelector,
   activeGenreSelector,
   genresSelector,
   perPageSelector,
   filmsByGenreSelector,
   visibleFilmsListSelector,
-  isAllFilmsLoadedSelector
+  isAllFilmsLoadedSelector,
 };

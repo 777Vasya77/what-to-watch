@@ -1,5 +1,15 @@
 import ActionType from '~/actions/films/action-types';
 
+export const setLoading = (loadingStatus) => ({
+  type: ActionType.SET_LOADING,
+  payload: loadingStatus
+});
+
+export const setError = (error) => ({
+  type: ActionType.SET_ERROR,
+  payload: {error}
+});
+
 export const setGenreFilter = (filter) => ({
   type: ActionType.SET_GENRE_FILTER,
   payload: filter

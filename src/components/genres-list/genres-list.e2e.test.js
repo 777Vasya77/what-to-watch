@@ -1,5 +1,5 @@
 import React from 'react';
-import GenresList from "~/components/genres-list/genres-list";
+import {GenresList} from "~/components/genres-list/genres-list";
 import {shallow} from "enzyme";
 
 describe(`GenresList component e2e tests`, () => {
@@ -14,7 +14,7 @@ describe(`GenresList component e2e tests`, () => {
           genres={genres}
           onGenreLinkClick={handleGenreLinkClick}
           activeGenreFilter={genres[0]}
-        />
+          loading={false}/>
     );
 
     const link = wrapper.find(`.catalog__genres-link`).first();

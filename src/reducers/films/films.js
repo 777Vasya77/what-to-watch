@@ -4,6 +4,8 @@ const INIT_FILM_PER_PAGE = 8;
 const ALL_GENRES = `All genres`;
 
 const initialState = {
+  loading: false,
+  error: null,
   filmsList: [],
   activeGenreFilter: ALL_GENRES,
   perPage: INIT_FILM_PER_PAGE
@@ -11,6 +13,14 @@ const initialState = {
 
 const films = (state = initialState, action = {}) => {
   switch (action.type) {
+    case ActionType.SET_LOADING:
+      return Object.assign({}, state, {
+        loading: action.payload
+      });
+    case ActionType.SET_ERROR:
+      return Object.assign({}, state, {
+        error: action.payload.error
+      });
     case ActionType.SET_GENRE_FILTER:
       return Object.assign({}, state, {
         activeGenreFilter: action.payload
