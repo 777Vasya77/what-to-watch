@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '~/components/app/app.jsx';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, compose, applyMiddleware} from 'redux';
 import rootReducer from '~/reducers/reducers';
 import thunk from 'redux-thunk';
-import {compose} from 'recompose';
 import createApi from '~/api/api';
 import {operations} from '~/operations/oparations';
 
