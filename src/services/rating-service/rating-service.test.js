@@ -5,13 +5,13 @@ describe(`RatingService tests`, () => {
 
   it(`getLevel method work correctly`, () => {
     expect(createService(0).getLevel()).toEqual(`Bad`);
-    expect(createService(2).getLevel()).toEqual(`Bad`);
+    expect(createService(2.9).getLevel()).toEqual(`Bad`);
     expect(createService(3).getLevel()).toEqual(`Normal`);
-    expect(createService(4).getLevel()).toEqual(`Normal`);
+    expect(createService(4.9).getLevel()).toEqual(`Normal`);
     expect(createService(5).getLevel()).toEqual(`Good`);
-    expect(createService(7).getLevel()).toEqual(`Good`);
+    expect(createService(7.9).getLevel()).toEqual(`Good`);
     expect(createService(8).getLevel()).toEqual(`Very good`);
-    expect(createService(9).getLevel()).toEqual(`Very good`);
+    expect(createService(9.9).getLevel()).toEqual(`Very good`);
     expect(createService(10).getLevel()).toEqual(`Awesome`);
     expect(createService(99).getLevel()).toEqual(`Awesome`);
   });
