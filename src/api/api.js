@@ -19,7 +19,7 @@ const createApi = (dispatch) => {
 
   const onError = (err) => {
     if (err.response.status === Status.NOT_FOUND) {
-      const {error} = err.response.data;
+      const {error = `Not found`} = err.response.data;
       Swal.fire(`Oops...`, error, `error`);
       dispatch(actions.films.setError({
         status: true,
