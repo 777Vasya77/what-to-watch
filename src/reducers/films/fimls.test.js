@@ -1,4 +1,4 @@
-import films, {getActiveGenre, getFilmsByGenre, getGenres, getIsAllFilmsLoaded} from '~/reducers/films/films';
+import films from '~/reducers/films/films';
 import ActionType from '~/actions/films/action-types';
 
 const INITIAL_STATE = {
@@ -19,52 +19,5 @@ describe(`Reducer work correctly`, () => {
       type: ActionType.SET_FILMS_PER_PAGE,
       payload: 20
     })).toEqual({perPage: 28});
-  });
-});
-
-describe(`Film selectors work correctly`, () => {
-  it(`Selector getGenres work correctly`, () => {
-    expect(getGenres({
-      films: {
-        filmsList: [{genre: `test`}, {genre: `test-1`}],
-      }
-    })).toEqual([`All genres`, `test`, `test-1`]);
-  });
-
-  it(`Selector getFilmsByGenre work correctly`, () => {
-    expect(getFilmsByGenre({
-      films: {
-        filmsList: [{genre: `test`}, {genre: `test-1`}],
-        activeGenreFilter: `test`,
-      }
-    })).toEqual([{genre: `test`}]);
-  });
-
-  it(`Selector getActiveGenre work correctly`, () => {
-    expect(getActiveGenre({
-      films: {
-        activeGenreFilter: `genre`
-      }
-    })).toEqual(`genre`);
-  });
-
-  it(`Selector getIsAllFilmsLoaded return TRUE if all films is loaded`, () => {
-    expect(getIsAllFilmsLoaded({
-      films: {
-        filmsList: [{genre: `test`}, {genre: `test`}],
-        activeGenreFilter: `All genres`,
-        perPage: 2
-      }
-    })).toEqual(true);
-  });
-
-  it(`Selector getIsAllFilmsLoaded return FALSE if all films is not loaded`, () => {
-    expect(getIsAllFilmsLoaded({
-      films: {
-        filmsList: [{genre: `test`}, {genre: `test`}],
-        activeGenreFilter: `All genres`,
-        perPage: 1
-      }
-    })).toEqual(false);
   });
 });

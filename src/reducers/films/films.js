@@ -33,42 +33,4 @@ const films = (state = initialState, action = {}) => {
   }
 };
 
-// selectors
-export const getGenres = (state) => {
-  const {filmsList} = state.films;
-  const genres = [...new Set(filmsList.map((film) => film.genre))];
-  genres
-    .sort()
-    .unshift(ALL_GENRES);
-
-  return genres;
-};
-
-export const getFilmsByGenre = (state, slice = true) => {
-  const {
-    activeGenreFilter: activeFilter,
-    filmsList: allFilms,
-  } = state.films;
-
-  const movies = (activeFilter === ALL_GENRES)
-    ? allFilms
-    : allFilms.filter((film) => film.genre === activeFilter);
-
-  return (slice) ? movies.slice(0, state.films.perPage) : movies;
-};
-
-export const getActiveGenre = (state) => state.films.activeGenreFilter;
-
-export const getIsAllFilmsLoaded = (state) => {
-  const {
-    activeGenreFilter: activeFilter,
-    filmsList: allFilms,
-    perPage
-  } = state.films;
-
-  return (activeFilter === ALL_GENRES)
-    ? perPage >= allFilms.length
-    : perPage >= getFilmsByGenre(state, false).length;
-};
-
 export default films;

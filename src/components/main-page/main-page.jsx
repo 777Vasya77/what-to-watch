@@ -7,8 +7,8 @@ import PageHeader from '~/components/page-header/page-header';
 import PageFooter from '~/components/page-footer/page-footer';
 import ShowMore from '~/components/show-more/show-more';
 import {actions} from '~/actions/actions';
-import * as filmsSelectors from '~/reducers/films/films';
 import withActiveItem from '~/hocs/with-active-item/with-active-item';
+import {selectors} from '~/selectors/selectors';
 
 const MoviesListWrapped = withActiveItem(MoviesList);
 
@@ -122,9 +122,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = (state) => ({
-  genres: filmsSelectors.getGenres(state),
-  activeGenreFilter: filmsSelectors.getActiveGenre(state),
-  isAllFilmsLoaded: filmsSelectors.getIsAllFilmsLoaded(state)
+  genres: selectors.films.genresSelector(state),
+  activeGenreFilter: selectors.films.activeGenreSelector(state),
+  isAllFilmsLoaded: selectors.films.isAllFilmsLoadedSelector(state),
 });
 
 export {MainPage};
