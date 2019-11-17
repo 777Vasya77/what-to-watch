@@ -1,4 +1,4 @@
-import * as actions from '~/actions/films/action-types';
+import ActionType from '~/actions/films/action-types';
 
 const INIT_FILM_PER_PAGE = 8;
 const ALL_GENRES = `All genres`;
@@ -11,19 +11,19 @@ const initialState = {
 
 const films = (state = initialState, action = {}) => {
   switch (action.type) {
-    case actions.SET_GENRE_FILTER:
+    case ActionType.SET_GENRE_FILTER:
       return Object.assign({}, state, {
         activeGenreFilter: action.payload
       });
-    case actions.SET_FILMS_PER_PAGE:
+    case ActionType.SET_FILMS_PER_PAGE:
       return Object.assign({}, state, {
         perPage: state.perPage + action.payload
       });
-    case actions.RESET_FILMS_PER_PAGE:
+    case ActionType.RESET_FILMS_PER_PAGE:
       return Object.assign({}, state, {
         perPage: INIT_FILM_PER_PAGE
       });
-    case actions.LOAD_FILMS:
+    case ActionType.LOAD_FILMS:
       return Object.assign({}, state, {
         filmsList: action.payload
       });

@@ -1,5 +1,5 @@
 import films, {getActiveGenre, getFilmsByGenre, getGenres, getIsAllFilmsLoaded} from '~/reducers/films/films';
-import {SET_FILMS_PER_PAGE, SET_GENRE_FILTER} from "~/actions/films/action-types";
+import ActionType from '~/actions/films/action-types';
 
 const INITIAL_STATE = {
   activeGenreFilter: `Some genre`
@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 describe(`Reducer work correctly`, () => {
   it(`Reducer should correctly set new active filter by genre`, () => {
     expect(films(INITIAL_STATE, {
-      type: SET_GENRE_FILTER,
+      type: ActionType.SET_GENRE_FILTER,
       payload: `Other genre`
     })).toEqual({
       activeGenreFilter: `Other genre`
@@ -16,7 +16,7 @@ describe(`Reducer work correctly`, () => {
 
   it(`Reducer should correctly set new value for films perPage property`, () => {
     expect(films({perPage: 8}, {
-      type: SET_FILMS_PER_PAGE,
+      type: ActionType.SET_FILMS_PER_PAGE,
       payload: 20
     })).toEqual({perPage: 28});
   });

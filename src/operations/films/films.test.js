@@ -1,7 +1,7 @@
 import MockAdapter from 'axios-mock-adapter';
 import createApi from '~/api/api';
 import {operations} from '~/operations/oparations';
-import {LOAD_FILMS} from "~/actions/films/action-types";
+import ActionType from '~/actions/films/action-types';
 import Film from '~/models/film';
 
 describe(`Films operations tests`, () => {
@@ -24,7 +24,7 @@ describe(`Films operations tests`, () => {
       .then(() => {
         expect(dispatch).toBeCalledTimes(1);
         expect(dispatch).toHaveBeenNthCalledWith(1, {
-          type: LOAD_FILMS,
+          type: ActionType.LOAD_FILMS,
           payload: Film.parseFilms([{films: true}])
         });
       });
