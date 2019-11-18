@@ -6,9 +6,9 @@ import GenresList from '~/components/genres-list/genres-list';
 import PageHeader from '~/components/page-header/page-header';
 import PageFooter from '~/components/page-footer/page-footer';
 import ShowMore from '~/components/show-more/show-more';
-import * as actions from '~/actions/films/films';
-import * as filmsSelectors from '~/reducers/films/films';
+import {actions} from '~/actions/actions';
 import withActiveItem from '~/hocs/with-active-item/with-active-item';
+import {selectors} from '~/selectors/selectors';
 
 const MoviesListWrapped = withActiveItem(MoviesList);
 
@@ -115,16 +115,16 @@ MainPage.propTypes = {
 
 const mapDispatchToProps = (dispatch) => ({
   onGenreLinkClick: (filter) => {
-    dispatch(actions.setGenreFilter(filter));
-    dispatch(actions.resetFilmsPerPage());
+    dispatch(actions.films.setGenreFilter(filter));
+    dispatch(actions.films.resetFilmsPerPage());
   },
-  onShowMoreClick: (perPage) => dispatch(actions.setFilmsPerPage(perPage))
+  onShowMoreClick: (perPage) => dispatch(actions.films.setFilmsPerPage(perPage))
 });
 
 const mapStateToProps = (state) => ({
-  genres: state.films.genres,
-  activeGenreFilter: filmsSelectors.getActiveGenre(state),
-  isAllFilmsLoaded: filmsSelectors.getIsAllFilmsLoaded(state)
+  genres: selectors.films.genresSelector(state),
+  activeGenreFilter: selectors.films.activeGenreSelector(state),
+  isAllFilmsLoaded: selectors.films.isAllFilmsLoadedSelector(state),
 });
 
 export {MainPage};

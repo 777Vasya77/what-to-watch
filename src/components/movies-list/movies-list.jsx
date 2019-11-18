@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SmallMovieCard from '~/components/small-movie-card/small-movie-card';
+import Loader from '~/components/loader/loader';
+import {selectors} from '~/selectors/selectors';
+import {connect} from 'react-redux';
 
 const DURATION = 1000;
 let timerId;
 
 const MoviesList = (props) => {
-  const {filmsList, activeItem: activeFilm, onChangeActiveItem} = props;
+  const {filmsList, activeItem: activeFilm, onChangeActiveItem, loading} = props;
 
   const handleMovieCardMouseEnter = (film) => {
     timerId = setTimeout(() => {
@@ -21,7 +24,7 @@ const MoviesList = (props) => {
 
   return (
     <div className="catalog__movies-list">
-      {filmsList.map((film) => {
+      {(loading) ? <Loader /> : filmsList.map((film) => {
         return (
           <SmallMovieCard
             film={film}
@@ -60,6 +63,13 @@ MoviesList.propTypes = {
   filmsList: PropTypes.arrayOf(PropTypes.exact(filmRules)).isRequired,
   onChangeActiveItem: PropTypes.func.isRequired,
   activeItem: PropTypes.exact(filmRules),
+  loading: PropTypes.bool,
 };
 
-export default MoviesList;
+const mapStateToProps = (state) => ({
+  loading: selectors.films.loading(state)
+});
+
+export {MoviesList};
+
+export default connect(mapStateToProps)(MoviesList);

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MoviesList from '~/components/movies-list/movies-list';
+import {MoviesList} from '~/components/movies-list/movies-list';
 import {FILMS} from '~/moks/test-moks';
 import Film from '~/models/film';
 
@@ -13,7 +13,7 @@ describe(`MoviesList component tests`, () => {
           <MoviesList
             filmsList={movies}
             onChangeActiveItem={jest.fn()}
-          />,
+            loading={false}/>,
           {createNodeMock: () => ({})}
       ).toJSON();
 

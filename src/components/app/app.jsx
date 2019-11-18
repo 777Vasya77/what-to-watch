@@ -4,8 +4,8 @@ import MoviePage from '~/components/movie-page/movie-page';
 import {COMMENTS} from '~/moks/comments';
 import Comment from '~/models/comment';
 import {connect} from 'react-redux';
-import * as filmsSelectors from '~/reducers/films/films';
 import withActiveItem from '~/hocs/with-active-item/with-active-item';
+import {selectors} from "~/selectors/selectors";
 
 const START_INDEX = 0;
 const SIMILAR_MOVIES_LIMIT = 4;
@@ -42,7 +42,7 @@ const App = (props) => {
 };
 
 const matStateToProps = (state) => ({
-  filmsList: filmsSelectors.getFilmsByGenre(state)
+  filmsList: selectors.films.visibleFilmsListSelector(state)
 });
 
 export {App};

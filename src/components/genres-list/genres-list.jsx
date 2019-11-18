@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {selectors} from "~/selectors/selectors";
 
-const GenresList = ({genres, activeGenreFilter, onGenreLinkClick}) => {
+const GenresList = ({genres, activeGenreFilter, onGenreLinkClick, loading}) => {
   const handleGenreLinkClick = (evt) => {
     evt.preventDefault();
     const currentGenre = evt.target.text;
@@ -11,7 +13,7 @@ const GenresList = ({genres, activeGenreFilter, onGenreLinkClick}) => {
 
   return (
     <ul className="catalog__genres-list">
-      {genres.map((genre) => (
+      {!loading && genres.map((genre) => (
         <li key={genre} className={`catalog__genres-item ${activeGenreFilter === genre && `catalog__genres-item--active`}`}>
           <a href="#" className="catalog__genres-link" onClick={handleGenreLinkClick}>{genre}</a>
         </li>
@@ -24,6 +26,13 @@ GenresList.propTypes = {
   genres: PropTypes.array.isRequired,
   activeGenreFilter: PropTypes.string.isRequired,
   onGenreLinkClick: PropTypes.func.isRequired,
+  loading: PropTypes.bool,
 };
 
-export default GenresList;
+const mapStateToProps = (state) => ({
+  loading: selectors.films.loading(state)
+});
+
+export {GenresList};
+
+export default connect(mapStateToProps)(GenresList);
