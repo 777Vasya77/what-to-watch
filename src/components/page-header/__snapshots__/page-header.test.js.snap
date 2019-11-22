@@ -31,16 +31,7 @@ exports[`PageHeader component tests Component render correctly 1`] = `
   <div
     className="user-block"
   >
-    <div
-      className="user-block__avatar"
-    >
-      <img
-        alt="User avatar"
-        height="63"
-        src="img/avatar.jpg"
-        width="63"
-      />
-    </div>
+    Sign In
   </div>
 </header>
 `;

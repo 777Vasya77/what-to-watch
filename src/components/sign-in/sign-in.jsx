@@ -1,6 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SignIn = () => {
+const UserData = {
+  EMAIL: `user-email`,
+  PASSWORD: `user-password`
+};
+
+const SignIn = (props) => {
+  const {onFormSubmit} = props;
+
+  const _handleFormSubmit = (evt) => {
+    evt.preventDefault();
+    const data = new FormData(evt.target);
+
+    onFormSubmit({
+      email: data.get(UserData.EMAIL),
+      password: data.get(UserData.PASSWORD),
+    });
+  };
+
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
@@ -16,7 +34,7 @@ const SignIn = () => {
       </header>
 
       <div className="sign-in user-page__content">
-        <form action="#" className="sign-in__form">
+        <form action="#" className="sign-in__form" onSubmit={_handleFormSubmit}>
           <div className="sign-in__fields">
             <div className="sign-in__field">
               <input className="sign-in__input" type="email" placeholder="Email address" name="user-email" id="user-email"/>
@@ -48,6 +66,10 @@ const SignIn = () => {
       </footer>
     </div>
   );
+};
+
+SignIn.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
 };
 
 export default SignIn;

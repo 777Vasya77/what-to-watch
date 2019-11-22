@@ -10,6 +10,7 @@ const similarFilms = Film.parseFilms(FILMS).slice(4);
 const comments = Comment.parseComments(COMMENTS);
 
 jest.mock(`~/components/movies-list/movies-list`, () => `movies-list`);
+jest.mock(`~/components/page-header/page-header`, () => `page-header`);
 
 describe(`MoviePage component tests`, () => {
   it(`Component render correctly`, () => {
