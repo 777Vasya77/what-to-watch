@@ -1,5 +1,4 @@
 import {selectors} from '~/selectors/selectors';
-import {createSelector} from "reselect";
 
 describe(`User selectors work correctly`, () => {
   it(`getAuthorizationStatus work correctly`, () => {

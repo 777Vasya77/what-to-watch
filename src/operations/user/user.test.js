@@ -2,7 +2,6 @@ import MockAdapter from 'axios-mock-adapter';
 import createApi from '~/api/api';
 import {operations} from '~/operations/oparations';
 import ActionType from '~/actions/user/action-types';
-import User from '~/models/user';
 
 jest.mock(`~/models/user`, () => ({
   parseUser: (data) => data

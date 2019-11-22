@@ -1,24 +1,23 @@
 import React from 'react';
-import {shallow} from "enzyme";
-import SignIn from "~/components/sign-in/sign-in";
+import {mount} from 'enzyme';
+import SignIn from '~/components/sign-in/sign-in';
 
-describe(``, () => {
+describe(`SingIn components e2e test`, () => {
   let wrapper;
   let handlerFormSubmit;
 
   beforeEach(() => {
     handlerFormSubmit = jest.fn();
 
-    wrapper = shallow(
+    wrapper = mount(
         <SignIn
           onFormSubmit={handlerFormSubmit}
         />
     );
 
-    const form = wrapper.find(`form`);
+    const form = wrapper.find(`.sign-in__form`);
     form.simulate(`submit`, {
-      name: `name`,
-      email: `email`
+      preventDefault: () => {},
     });
   });
 
@@ -32,8 +31,8 @@ describe(``, () => {
 
   it(`Check data in callback function`, () => {
     expect(handlerFormSubmit).toBeCalledWith({
-      name: `name`,
-      email: `email`
+      email: ``,
+      password: ``,
     });
   });
 });

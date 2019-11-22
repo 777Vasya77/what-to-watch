@@ -53,9 +53,11 @@ exports[`SignIn component tests Component render correctly 1`] = `
         >
           <input
             className="sign-in__input"
+            defaultValue=""
             id="user-email"
             name="user-email"
             placeholder="Email address"
+            required={true}
             type="email"
           />
           <label
@@ -70,9 +72,11 @@ exports[`SignIn component tests Component render correctly 1`] = `
         >
           <input
             className="sign-in__input"
+            defaultValue=""
             id="user-password"
             name="user-password"
             placeholder="Password"
+            required={true}
             type="password"
           />
           <label
