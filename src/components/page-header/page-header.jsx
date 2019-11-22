@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {selectors} from "~/selectors/selectors";
+import {selectors} from '~/selectors/selectors';
 
 const PageHeader = (props) => {
   const {isAuth, authUser} = props;
