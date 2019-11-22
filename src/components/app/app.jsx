@@ -5,7 +5,7 @@ import {COMMENTS} from '~/moks/comments';
 import Comment from '~/models/comment';
 import {connect} from 'react-redux';
 import withActiveItem from '~/hocs/with-active-item/with-active-item';
-import {selectors} from "~/selectors/selectors";
+import {selectors} from '~/selectors/selectors';
 
 const START_INDEX = 0;
 const SIMILAR_MOVIES_LIMIT = 4;
