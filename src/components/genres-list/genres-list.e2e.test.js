@@ -1,6 +1,6 @@
 import React from 'react';
-import {GenresList} from "~/components/genres-list/genres-list";
-import {shallow} from "enzyme";
+import {GenresList} from '~/components/genres-list/genres-list';
+import {shallow} from 'enzyme';
 
 describe(`GenresList component e2e tests`, () => {
   const genres = [`1`, `2`];

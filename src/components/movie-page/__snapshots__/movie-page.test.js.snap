@@ -26,48 +26,7 @@ Array [
       >
         WTW
       </h1>
-      <header
-        className="page-header movie-card__head"
-      >
-        <div
-          className="logo"
-        >
-          <a
-            className="logo__link"
-            href="/"
-          >
-            <span
-              className="logo__letter logo__letter--1"
-            >
-              W
-            </span>
-            <span
-              className="logo__letter logo__letter--2"
-            >
-              T
-            </span>
-            <span
-              className="logo__letter logo__letter--3"
-            >
-              W
-            </span>
-          </a>
-        </div>
-        <div
-          className="user-block"
-        >
-          <div
-            className="user-block__avatar"
-          >
-            <img
-              alt="User avatar"
-              height="63"
-              src="img/avatar.jpg"
-              width="63"
-            />
-          </div>
-        </div>
-      </header>
+      <page-header />
       <div
         className="movie-card__wrap"
       >
@@ -266,577 +225,497 @@ Array [
       >
         More like this
       </h2>
-      <div
-        className="catalog__movies-list"
-      >
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=5"
-            >
-              War of the Worlds
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=6"
-            >
-              Aviator
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=7"
-            >
-              Beach
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=8"
-            >
-              A Star Is Born
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=9"
-            >
-              Midnight Special
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=10"
-            >
-              Matrix
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=11"
-            >
-              What We Do in the Shadows
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=12"
-            >
-              Johnny English
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=13"
-            >
-              Pulp Fiction
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=14"
-            >
-              Legend
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=15"
-            >
-              Moonrise Kingdom
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=16"
-            >
-              Fantastic Beasts: The Crimes of Grindelwald
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=17"
-            >
-              Shutter Island
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=18"
-            >
-              Gangs of new york
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=19"
-            >
-              The Revenant
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=20"
-            >
-              Seven Years in Tibet
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg"
-              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=21"
-            >
-              Bronson
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=22"
-            >
-              Orlando
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=23"
-            >
-              No Country for Old Men
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=24"
-            >
-              Snatch
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <video
-              height="175"
-              muted={true}
-              poster="https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg"
-              src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-              width="280"
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="/films?id=25"
-            >
-              Bohemian Rhapsody
-            </a>
-          </h3>
-        </article>
-      </div>
+      <movies-list
+        activeItem={null}
+        filmsList={
+          Array [
+            Film {
+              "backgroundColor": "#9B7E61",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/War_of_the_Worlds.jpg",
+              "description": "As Earth is invaded by alien tripod fighting machines, one family fights for survival.",
+              "director": "Steven Spielberg",
+              "genre": "Adventure",
+              "id": 5,
+              "isFavorite": false,
+              "name": "War of the Worlds",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/War_of_the_Worlds.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.3,
+              "released": 2005,
+              "runTime": 116,
+              "scoresCount": 386834,
+              "starring": Array [
+                "Tom Cruise",
+                "Dakota Fanning",
+                "Tim Robbins",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#D6CDAF",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Aviator.jpg",
+              "description": "A biopic depicting the early years of legendary Director and aviator Howard Hughes' career from the late 1920s to the mid 1940s.",
+              "director": "Martin Scorsese",
+              "genre": "Drama",
+              "id": 6,
+              "isFavorite": false,
+              "name": "Aviator",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Aviator.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 3.8,
+              "released": 2014,
+              "runTime": 170,
+              "scoresCount": 307174,
+              "starring": Array [
+                "Leonardo DiCaprio",
+                "Cate Blanchett",
+                "Kate Beckinsale",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#EBC996",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/beach.jpg",
+              "description": "Vicenarian Richard travels to Thailand and finds himself in possession of a strange map. Rumours state that it leads to a solitary beach paradise, a tropical bliss. Excited and intrigued, he sets out to find it.",
+              "director": "Danny Boyle",
+              "genre": "Adventure",
+              "id": 7,
+              "isFavorite": false,
+              "name": "Beach",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/beach.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.3,
+              "released": 2000,
+              "runTime": 119,
+              "scoresCount": 207824,
+              "starring": Array [
+                "Leonardo DiCaprio",
+                "Daniel York",
+                "Patcharawan Patarakijjanon",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#C4C0C0",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/A_Star_is_Born.jpg",
+              "description": "A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.",
+              "director": "Bradley Cooper",
+              "genre": "Drama",
+              "id": 8,
+              "isFavorite": false,
+              "name": "A Star Is Born",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/A_Star_Is_Born.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.9,
+              "released": 2018,
+              "runTime": 136,
+              "scoresCount": 244484,
+              "starring": Array [
+                "Lady Gaga",
+                "Bradley Cooper",
+                "Sam Elliott",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#828585",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Midnight_Special.jpg",
+              "description": "A father and son go on the run, pursued by the government and a cult drawn to the child's special powers.",
+              "director": "Jeff Nichols",
+              "genre": "Action",
+              "id": 9,
+              "isFavorite": false,
+              "name": "Midnight Special",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Midnight_Special.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 3.3,
+              "released": 2016,
+              "runTime": 112,
+              "scoresCount": 67815,
+              "starring": Array [
+                "Michael Shannon",
+                "Joel Edgerton",
+                "Kirsten Dunst ",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#B9B27E",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/matrix.jpg",
+              "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+              "director": "Wachowski Brothers",
+              "genre": "Action",
+              "id": 10,
+              "isFavorite": false,
+              "name": "Matrix",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/matrix.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 4.4,
+              "released": 1999,
+              "runTime": 136,
+              "scoresCount": 1503092,
+              "starring": Array [
+                "Keanu Reeves",
+                "Laurence Fishburne",
+                "Carrie-Anne Moss",
+              ],
+              "videoLink": "http://media.xiph.org/mango/tears_of_steel_1080p.webm",
+            },
+            Film {
+              "backgroundColor": "#A39E81",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/What-We-Do-in-the-Shadows.jpg",
+              "description": "A look into the daily (or rather, nightly) lives of three vampires who've lived together for over 100 years, in Staten Island.",
+              "director": "Jemaine Clement",
+              "genre": "Comedy",
+              "id": 11,
+              "isFavorite": false,
+              "name": "What We Do in the Shadows",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/What-We-Do-in-the-Shadows.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 4.2,
+              "released": 2019,
+              "runTime": 30,
+              "scoresCount": 6173,
+              "starring": Array [
+                "Kayvan Novak",
+                "Matt Berry",
+                "Natasia Demetriou",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#F0DBA2",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Johnny_English.jpg",
+              "description": "After a sudden attack on the MI5, Johnny English, Britain's most confident yet unintelligent spy, becomes Britain's only spy.",
+              "director": "Peter Howitt",
+              "genre": "Comedy",
+              "id": 12,
+              "isFavorite": false,
+              "name": "Johnny English",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Johnny_English.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 3.1,
+              "released": 2003,
+              "runTime": 88,
+              "scoresCount": 136843,
+              "starring": Array [
+                "Rowan Atkinson",
+                "John Malkovich",
+                "Natalie Imbruglia",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#795433",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Pulp_Fiction.jpg",
+              "description": "The lives of two mob hitmen, a boxer, a gangster & his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+              "director": "Quentin Tarantino",
+              "genre": "Crime",
+              "id": 13,
+              "isFavorite": false,
+              "name": "Pulp Fiction",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Pulp_Fiction.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 4.5,
+              "released": 1994,
+              "runTime": 153,
+              "scoresCount": 1635992,
+              "starring": Array [
+                "John Travolta",
+                "Uma Thurman",
+                "Samuel L. Jackson",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#E1DAD7",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/legend.jpg",
+              "description": "Identical twin gangsters Ronald and Reginald Kray terrorize London during the 1960s.",
+              "director": "Brian Helgeland",
+              "genre": "Crime",
+              "id": 14,
+              "isFavorite": false,
+              "name": "Legend",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Legend.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.5,
+              "released": 2015,
+              "runTime": 132,
+              "scoresCount": 138487,
+              "starring": Array [
+                "Tom Hardy",
+                "Emily Browning",
+                "Taron Egerton",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#D8E3E5",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Moonrise_Kingdom.jpg",
+              "description": "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them.",
+              "director": "Wes Anderson",
+              "genre": "Adventure",
+              "id": 15,
+              "isFavorite": false,
+              "name": "Moonrise Kingdom",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Moonrise_Kingdom.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.9,
+              "released": 2012,
+              "runTime": 94,
+              "scoresCount": 291183,
+              "starring": Array [
+                "Jared Gilman",
+                "Kara Hayward",
+                "Bruce Willis",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#B6A99F",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Fantastic_Beasts.jpg",
+              "description": "In an effort to thwart Grindelwald's plans of raising pure-blood wizards to rule over all non-magical beings, Albus Dumbledore enlists his former student Newt Scamander, who agrees to help, though he's unaware of the dangers that lie ahead. Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world.",
+              "director": "David Yates",
+              "genre": "Fantasy",
+              "id": 16,
+              "isFavorite": false,
+              "name": "Fantastic Beasts: The Crimes of Grindelwald",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Fantastic_Beasts.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 3.4,
+              "released": 2018,
+              "runTime": 134,
+              "scoresCount": 160757,
+              "starring": Array [
+                "Eddie Redmayne",
+                "Katherine Waterston",
+                "Dan Fogler",
+              ],
+              "videoLink": "http://media.xiph.org/mango/tears_of_steel_1080p.webm",
+            },
+            Film {
+              "backgroundColor": "#977461",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Shutter_Island.jpg",
+              "description": "In 1954, a U.S. Marshal investigates the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
+              "director": "Martin Scorsese",
+              "genre": "Thriller",
+              "id": 17,
+              "isFavorite": false,
+              "name": "Shutter Island",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Shutter_Island.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 4.1,
+              "released": 2010,
+              "runTime": 138,
+              "scoresCount": 1002557,
+              "starring": Array [
+                "Leonardo DiCaprio",
+                "Emily Mortimer",
+                "Mark Ruffalo",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#A6B7AC",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/gangs_of_new_york.jpg",
+              "description": "In 1862, Amsterdam Vallon returns to the Five Points area of New York City seeking revenge against Bill the Butcher, his father's killer.",
+              "director": "Martin Scorsese",
+              "genre": "Crime",
+              "id": 18,
+              "isFavorite": false,
+              "name": "Gangs of new york",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Gangs_of_New_York_Poster.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.8,
+              "released": 2002,
+              "runTime": 167,
+              "scoresCount": 370881,
+              "starring": Array [
+                "Leonardo DiCaprio",
+                "Cameron Diaz",
+                "Daniel Day-Lewis",
+              ],
+              "videoLink": "http://media.xiph.org/mango/tears_of_steel_1080p.webm",
+            },
+            Film {
+              "backgroundColor": "#92918B",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Revenant.jpg",
+              "description": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+              "director": "Alejandro G. Iñárritu",
+              "genre": "Action",
+              "id": 19,
+              "isFavorite": false,
+              "name": "The Revenant",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Revenant.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 4,
+              "released": 2015,
+              "runTime": 156,
+              "scoresCount": 618498,
+              "starring": Array [
+                "Leonardo DiCaprio",
+                "Tom Hardy",
+                "Will Poulter",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#C6CADF",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Seven_Years_in_Tibet.jpg",
+              "description": "True story of Heinrich Harrer, an Austrian mountain climber who became friends with the Dalai Lama at the time of China's takeover of Tibet.",
+              "director": "Jean-Jacques Annaud",
+              "genre": "Adventure",
+              "id": 20,
+              "isFavorite": false,
+              "name": "Seven Years in Tibet",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Seven_Years_in_Tibet.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 3.6,
+              "released": 1997,
+              "runTime": 136,
+              "scoresCount": 112612,
+              "starring": Array [
+                "Brad Pitt",
+                "David Thewlis",
+                "BD Wong",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#73B39A",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/bronson.jpg",
+              "description": "A young man who was sentenced to seven years in prison for robbing a post office ends up spending three decades in solitary confinement. During this time, his own personality is supplanted by his alter-ego, Charles Bronson.",
+              "director": "Nicolas Winding Refn",
+              "genre": "Action",
+              "id": 21,
+              "isFavorite": false,
+              "name": "Bronson",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/bronson.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg",
+              "previewVideoLink": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+              "rating": 3.6,
+              "released": 2008,
+              "runTime": 92,
+              "scoresCount": 109661,
+              "starring": Array [
+                "Tom Hardy",
+                "Kelly Adams",
+                "Luing Andrews",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#D8D3BD",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Orlando.jpg",
+              "description": "Young nobleman Orlando is commanded by Queen Elizabeth I to stay forever young. Miraculously, he does just that. The film follows him as he moves through several centuries of British history, experiencing a variety of lives and relationships along the way, and even changing sex.",
+              "director": "Sally Potter",
+              "genre": "Drama",
+              "id": 22,
+              "isFavorite": false,
+              "name": "Orlando",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Orlando.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 3.6,
+              "released": 1992,
+              "runTime": 94,
+              "scoresCount": 12292,
+              "starring": Array [
+                "Tilda Swinton",
+                "Billy Zane",
+                "Quentin Crisp",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#BDAD8F",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/No_Country_for_Old_Men.jpg",
+              "description": "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.",
+              "director": "Ethan Coen",
+              "genre": "Crime",
+              "id": 23,
+              "isFavorite": false,
+              "name": "No Country for Old Men",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/No_Country_for_Old_Men.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 4.1,
+              "released": 2007,
+              "runTime": 122,
+              "scoresCount": 764976,
+              "starring": Array [
+                "Tommy Lee Jones",
+                "Javier Bardem",
+                "Josh Brolin",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#FDFDFC",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Snatch.jpg",
+              "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+              "director": "Guy Ritchie",
+              "genre": "Comedy",
+              "id": 24,
+              "isFavorite": false,
+              "name": "Snatch",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Snatch.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 4.2,
+              "released": 2000,
+              "runTime": 104,
+              "scoresCount": 716577,
+              "starring": Array [
+                "Jason Statham",
+                "Brad Pitt",
+                "Benicio Del Toro",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+            Film {
+              "backgroundColor": "#929FA5",
+              "backgroundImage": "https://es31-server.appspot.com/wtw/static/film/background/Bohemian_Rhapsody.jpg",
+              "description": "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer Freddie Mercury. Freddie defied stereotypes and shattered convention to become one of the most beloved entertainers on the planet. The film traces the meteoric rise of the band through their iconic songs and revolutionary sound. They reach unparalleled success, but in an unexpected turn Freddie, surrounded by darker influences, shuns Queen in pursuit of his solo career. Having suffered greatly without the collaboration of Queen, Freddie manages to reunite with his bandmates just in time for Live Aid. While bravely facing a recent AIDS diagnosis, Freddie leads the band in one of the greatest performances in the history of rock music. Queen cements a legacy that continues to inspire outsiders, dreamers and music lovers to this day.",
+              "director": "Bryan Singer",
+              "genre": "Drama",
+              "id": 25,
+              "isFavorite": false,
+              "name": "Bohemian Rhapsody",
+              "posterImage": "https://es31-server.appspot.com/wtw/static/film/poster/Bohemian_Rhapsody.jpg",
+              "previewImage": "https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg",
+              "previewVideoLink": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+              "rating": 4.1,
+              "released": 2018,
+              "runTime": 134,
+              "scoresCount": 338903,
+              "starring": Array [
+                "Rami Malek",
+                "Lucy Boynton",
+                "Gwilym Lee",
+              ],
+              "videoLink": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
+            },
+          ]
+        }
+        onChangeActiveItem={[Function]}
+      />
     </section>
     <footer
       className="page-footer"

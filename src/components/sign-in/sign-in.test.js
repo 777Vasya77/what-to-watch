@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {PageHeader} from '~/components/page-header/page-header';
+import SignIn from '~/components/sign-in/sign-in';
 
-describe(`PageHeader component tests`, () => {
+describe(`SignIn component tests`, () => {
   it(`Component render correctly`, () => {
     const tree = renderer
         .create(
-            <PageHeader isAuth={false}/>
+            <SignIn onFormSubmit={jest.fn()}/>
         ).toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -20,11 +20,12 @@ const init = () => {
   );
   /* eslint-enable */
 
+  const login = (data) => store.dispatch(operations.user.login(data));
   store.dispatch(operations.films.loadFilms());
 
   ReactDOM.render(
       <Provider store={store}>
-        <App />
+        <App userLogin={login}/>
       </Provider>,
       document.querySelector(`#root`)
   );

@@ -5,7 +5,8 @@ import {COMMENTS} from '~/moks/comments';
 import Comment from '~/models/comment';
 import {connect} from 'react-redux';
 import withActiveItem from '~/hocs/with-active-item/with-active-item';
-import {selectors} from "~/selectors/selectors";
+import {selectors} from '~/selectors/selectors';
+import SignIn from '~/components/sign-in/sign-in';
 
 const START_INDEX = 0;
 const SIMILAR_MOVIES_LIMIT = 4;
@@ -23,7 +24,11 @@ const getSimilarMovies = (currentMovie, movieList) => {
 };
 
 const getPageScreen = (propsData) => {
-  const {filmsList} = propsData;
+  const {filmsList, isAuthorizationRequired, userLogin} = propsData;
+
+  if (isAuthorizationRequired) {
+    return <SignIn onFormSubmit={userLogin}/>;
+  }
 
   switch (location.pathname) {
     case `/`:
@@ -42,7 +47,8 @@ const App = (props) => {
 };
 
 const matStateToProps = (state) => ({
-  filmsList: selectors.films.visibleFilmsListSelector(state)
+  filmsList: selectors.films.visibleFilmsListSelector(state),
+  isAuthorizationRequired: selectors.user.getAuthorizationStatus(state),
 });
 
 export {App};
