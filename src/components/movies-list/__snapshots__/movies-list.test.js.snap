@@ -25,7 +25,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=1"
+        href="/films/1"
       >
         Macbeth
       </a>
@@ -52,7 +52,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=2"
+        href="/films/2"
       >
         Once Upon a Time in America
       </a>
@@ -79,7 +79,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=3"
+        href="/films/3"
       >
         We need to talk about Kevin
       </a>
@@ -106,7 +106,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=4"
+        href="/films/4"
       >
         Dardjeeling Limited
       </a>
@@ -133,7 +133,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=5"
+        href="/films/5"
       >
         War of the Worlds
       </a>
@@ -160,7 +160,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=6"
+        href="/films/6"
       >
         Aviator
       </a>
@@ -187,7 +187,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=7"
+        href="/films/7"
       >
         Beach
       </a>
@@ -214,7 +214,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=8"
+        href="/films/8"
       >
         A Star Is Born
       </a>
@@ -241,7 +241,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=9"
+        href="/films/9"
       >
         Midnight Special
       </a>
@@ -268,7 +268,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=10"
+        href="/films/10"
       >
         Matrix
       </a>
@@ -295,7 +295,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=11"
+        href="/films/11"
       >
         What We Do in the Shadows
       </a>
@@ -322,7 +322,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=12"
+        href="/films/12"
       >
         Johnny English
       </a>
@@ -349,7 +349,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=13"
+        href="/films/13"
       >
         Pulp Fiction
       </a>
@@ -376,7 +376,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=14"
+        href="/films/14"
       >
         Legend
       </a>
@@ -403,7 +403,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=15"
+        href="/films/15"
       >
         Moonrise Kingdom
       </a>
@@ -430,7 +430,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=16"
+        href="/films/16"
       >
         Fantastic Beasts: The Crimes of Grindelwald
       </a>
@@ -457,7 +457,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=17"
+        href="/films/17"
       >
         Shutter Island
       </a>
@@ -484,7 +484,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=18"
+        href="/films/18"
       >
         Gangs of new york
       </a>
@@ -511,7 +511,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=19"
+        href="/films/19"
       >
         The Revenant
       </a>
@@ -538,7 +538,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=20"
+        href="/films/20"
       >
         Seven Years in Tibet
       </a>
@@ -565,7 +565,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=21"
+        href="/films/21"
       >
         Bronson
       </a>
@@ -592,7 +592,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=22"
+        href="/films/22"
       >
         Orlando
       </a>
@@ -619,7 +619,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=23"
+        href="/films/23"
       >
         No Country for Old Men
       </a>
@@ -646,7 +646,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=24"
+        href="/films/24"
       >
         Snatch
       </a>
@@ -673,7 +673,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     >
       <a
         className="small-movie-card__link"
-        href="/films?id=25"
+        href="/films/25"
       >
         Bohemian Rhapsody
       </a>

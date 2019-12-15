@@ -1,4 +1,5 @@
 import {createSelector} from 'reselect';
+
 const ALL_GENRES = `All genres`;
 
 const filmsSelector = (state) => state.films.filmsList;
@@ -41,6 +42,15 @@ const isAllFilmsLoadedSelector = createSelector(
     (films, visibleFilms) => visibleFilms.length >= films.length
 );
 
+const getFilmById = (state, filmId) => state.films.filmsList.find((item) => item.id === +filmId);
+
+const getSimilarFilmsSelector = (state, filmId) => {
+  const currentFilm = getFilmById(state, filmId);
+  const filmsList = filmsSelector(state);
+
+  return filmsList.filter((film) => film.genre === currentFilm.genre && film.id !== currentFilm.id);
+};
+
 export const films = {
   loading,
   error,
@@ -51,4 +61,6 @@ export const films = {
   filmsByGenreSelector,
   visibleFilmsListSelector,
   isAllFilmsLoadedSelector,
+  getFilmById,
+  getSimilarFilmsSelector,
 };

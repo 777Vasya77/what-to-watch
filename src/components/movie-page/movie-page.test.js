@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import MoviePage from '~/components/movie-page/movie-page';
+import {MoviePage} from '~/components/movie-page/movie-page';
 import Film from '~/models/film';
 import {COMMENTS, FILMS} from '~/moks/test-moks';
 import Comment from '~/models/comment';
@@ -20,7 +20,7 @@ describe(`MoviePage component tests`, () => {
           similarFilms={similarFilms}
           comments={comments}
           onChangeActiveItem={jest.fn()}
-        />,
+          loadComments={jest.fn()}/>,
         {createNodeMock: () => ({})}
     ).toJSON();
 

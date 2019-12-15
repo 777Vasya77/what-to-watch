@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {actions} from '~/actions/actions';
 import Swal from 'sweetalert2';
+import history from '~/history';
 
 export const BASE_URL = `https://htmlacademy-react-2.appspot.com`;
 const POST_DOMAIN = `wtw`;
@@ -9,6 +10,10 @@ const Status = {
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
   NOT_FOUND: 404
+};
+export const Route = {
+  LOGIN: `/login`,
+  MOVIES: `/`,
 };
 
 const createApi = (dispatch) => {
@@ -44,6 +49,7 @@ const createApi = (dispatch) => {
       case Status.UNAUTHORIZED: {
         const {error = `Unauthorized`} = err.response.data;
         fireError(error);
+        history.push(Route.LOGIN);
         break;
       }
     }

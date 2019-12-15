@@ -1,16 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {PageHeader} from '~/components/page-header/page-header';
+import ShowMore from '~/components/show-more/show-more';
 
-jest.mock(`react-router-dom`, () => ({
-  Link: `Link`,
-}));
-
-describe(`PageHeader component tests`, () => {
+describe(`ShowMore component tests`, () => {
   it(`Component render correctly`, () => {
     const tree = renderer
         .create(
-            <PageHeader isAuth={false}/>
+            <ShowMore onShowMoreClick={jest.fn()}/>
         ).toJSON();
 
     expect(tree).toMatchSnapshot();

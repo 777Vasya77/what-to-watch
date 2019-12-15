@@ -7,9 +7,9 @@ exports[`PageHeader component tests Component render correctly 1`] = `
   <div
     className="logo"
   >
-    <a
+    <Link
       className="logo__link"
-      href="/"
+      to="/"
     >
       <span
         className="logo__letter logo__letter--1"
@@ -26,12 +26,16 @@ exports[`PageHeader component tests Component render correctly 1`] = `
       >
         W
       </span>
-    </a>
+    </Link>
   </div>
   <div
     className="user-block"
   >
-    Sign In
+    <Link
+      to="/login"
+    >
+      Sign In
+    </Link>
   </div>
 </header>
 `;
