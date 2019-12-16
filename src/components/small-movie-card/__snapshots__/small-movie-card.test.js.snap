@@ -20,12 +20,12 @@ exports[`SmallMovieCard component render correctly 1`] = `
   <h3
     className="small-movie-card__title"
   >
-    <a
+    <Link
       className="small-movie-card__link"
-      href="/films?id=1"
+      to="/films/1"
     >
       Macbeth
-    </a>
+    </Link>
   </h3>
 </article>
 `;

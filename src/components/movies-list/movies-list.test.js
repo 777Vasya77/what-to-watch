@@ -6,6 +6,10 @@ import Film from '~/models/film';
 
 const movies = Film.parseFilms(FILMS);
 
+jest.mock(`react-router-dom`, () => ({
+  Link: `Link`
+}));
+
 describe(`MoviesList component tests`, () => {
   it(`Component render correctly`, () => {
     const tree = renderer

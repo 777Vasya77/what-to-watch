@@ -7,7 +7,7 @@ jest.mock(`~/components/main-page/main-page`, () => `main-page`);
 it(`App component render correctly`, () => {
   const tree = renderer
     .create(
-        <App />,
+        <App isReady={true} />,
         {createNodeMock: () => ({})}
     ).toJSON();
 

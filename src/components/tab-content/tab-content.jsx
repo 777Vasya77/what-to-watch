@@ -45,7 +45,7 @@ TabContent.propTypes = {
     rating: PropTypes.number.isRequired,
     body: PropTypes.string.isRequired,
     date: PropTypes.instanceOf(Date).isRequired,
-  })).isRequired,
+  })),
 };
 
 export default TabContent;

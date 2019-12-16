@@ -8,8 +8,11 @@ const isAuth = createSelector(
     (authUser) => Boolean(authUser)
 );
 
+const myFilmListSelectors = (state) => state.myFilmList;
+
 export const user = {
   getAuthorizationStatus,
   getAuthUser,
-  isAuth
+  isAuth,
+  myFilmListSelectors,
 };

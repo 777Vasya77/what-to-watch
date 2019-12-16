@@ -21,4 +21,25 @@ describe(`User action creator work correctly`, () => {
       }
     });
   });
+
+  it(`Action creator for addFilmToMyList return correctly action`, () => {
+    expect(actions.user.addFilmToMyList({film: 1})).toEqual({
+      type: ActionType.ADD_FILM,
+      payload: {film: 1}
+    });
+  });
+
+  it(`Action creator for removeFilmToMyList return correctly action`, () => {
+    expect(actions.user.removeFilmToMyList({film: 1})).toEqual({
+      type: ActionType.REMOVE_FILM,
+      payload: {film: 1}
+    });
+  });
+
+  it(`Action creator for initMyListFilms return correctly action`, () => {
+    expect(actions.user.initMyListFilms([{film: 1}])).toEqual({
+      type: ActionType.INIT_MY_LIST_FILM,
+      payload: [{film: 1}]
+    });
+  });
 });

@@ -9,6 +9,10 @@ const Column = {
 const MoviePageReviews = (props) => {
   const {comments} = props;
 
+  if (!comments.length) {
+    return <h2>Not reviews</h2>;
+  }
+
   const commentsRender = (column) => {
     const n = (column === Column.RIGHT) ? 1 : 0;
 
@@ -49,7 +53,7 @@ MoviePageReviews.propTypes = {
     rating: PropTypes.number.isRequired,
     body: PropTypes.string.isRequired,
     date: PropTypes.instanceOf(Date).isRequired,
-  })).isRequired,
+  })),
 };
 
 export default MoviePageReviews;

@@ -7,6 +7,7 @@ import rootReducer from '~/reducers/reducers';
 import thunk from 'redux-thunk';
 import createApi from '~/api/api';
 import {operations} from '~/operations/oparations';
+import {BrowserRouter} from 'react-router-dom';
 
 const init = () => {
   const api = createApi((...args) => store.dispatch(...args));
@@ -21,11 +22,13 @@ const init = () => {
   /* eslint-enable */
 
   const login = (data) => store.dispatch(operations.user.login(data));
-  store.dispatch(operations.films.loadFilms());
+  store.dispatch(operations.general.init());
 
   ReactDOM.render(
       <Provider store={store}>
-        <App userLogin={login}/>
+        <BrowserRouter>
+          <App onUserLogin={login}/>
+        </BrowserRouter>
       </Provider>,
       document.querySelector(`#root`)
   );

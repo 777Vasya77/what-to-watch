@@ -65,6 +65,7 @@ exports[`MovieCardHero component tests Component render correctly 1`] = `
         </button>
         <button
           className="btn btn--list movie-card__button"
+          onClick={[Function]}
           type="button"
         >
           <svg

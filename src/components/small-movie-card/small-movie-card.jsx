@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import VideoPlayer from '~/components/video-player/video-player';
+import {Link} from "react-router-dom";
 
 const SmallMovieCard = (props) => {
   const {film, isPlaying, onMovieCardMouseEnter, onMovieCardMouseLeave} = props;
@@ -29,7 +30,7 @@ const SmallMovieCard = (props) => {
         />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href={`/films?id=${film.id}`}>{name}</a>
+        <Link className="small-movie-card__link" to={`/films/${film.id}`}>{name}</Link>
       </h3>
     </article>
   );
