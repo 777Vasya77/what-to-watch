@@ -11,6 +11,7 @@ import SignIn from '~/components/sign-in/sign-in';
 import history from '~/history';
 import AddReview from "~/components/add-review/add-review";
 import withIsValid from "~/hocs/with-is-valid/with-is-valid";
+import PrivateRoute from "~/components/private-route/private-route";
 
 const MoviePageWrapped = withActiveItem(MoviePage);
 
@@ -27,7 +28,7 @@ const App = (props) => {
         <Route path="/login" exact component={() => <SignIn onFormSubmit={onUserLogin}/>} />
         <Route path="/" exact component={() => <MainPage filmsList={filmsList} />} />
         <Route path="/films/:id" exact component={MoviePageWrapped} />
-        <Route path="/films/:id/review" exact component={withIsValid(AddReview)} />
+        <PrivateRoute path="/films/:id/review" exact component={withIsValid(AddReview)} />
       </Switch>
     </Router>
   );
