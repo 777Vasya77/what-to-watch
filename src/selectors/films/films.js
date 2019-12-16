@@ -51,6 +51,13 @@ const getSimilarFilmsSelector = (state, filmId) => {
   return filmsList.filter((film) => film.genre === currentFilm.genre && film.id !== currentFilm.id);
 };
 
+const getFavoriteFilmList = createSelector(
+    filmsSelector,
+    (films) => films.filter((film) => film.isFavorite)
+);
+
+const isFavoriteSelector = (state, filmId) => state.films.filmsList.find((item) => item.id === +filmId).isFavorite;
+
 export const films = {
   loading,
   error,
@@ -63,4 +70,6 @@ export const films = {
   isAllFilmsLoadedSelector,
   getFilmById,
   getSimilarFilmsSelector,
+  isFavoriteSelector,
+  getFavoriteFilmList,
 };

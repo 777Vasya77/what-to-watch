@@ -1,9 +1,18 @@
 import React from 'react';
 import PageHeader from '~/components/page-header/page-header';
 import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {operations} from "~/operations/oparations";
+import {selectors} from "~/selectors/selectors";
 
 const MovieCardHero = (props) => {
-  const {film} = props;
+  const {film, toggleFavorite} = props;
+
+  const _handlerFavoriteButtonClick = () => {
+    const status = (film.isFavorite) ? 0 : 1;
+    film.isFavorite = !film.isFavorite;
+    toggleFavorite(film.id, status);
+  };
 
   return (
     <div className="movie-card__hero">
@@ -30,10 +39,15 @@ const MovieCardHero = (props) => {
               </svg>
               <span>Play</span>
             </button>
-            <button className="btn btn--list movie-card__button" type="button">
-              <svg viewBox="0 0 19 20" width="19" height="20">
-                <use xlinkHref="#add" />
-              </svg>
+            <button className="btn btn--list movie-card__button" type="button" onClick={_handlerFavoriteButtonClick}>
+              {
+                film.isFavorite
+                  ? <svg viewBox="0 0 18 14" width="18" height="14">
+                    <use xlinkHref="#in-list" />
+                  </svg> : <svg viewBox="0 0 19 20" width="19" height="20">
+                    <use xlinkHref="#add" />
+                  </svg>
+              }
               <span>My list</span>
             </button>
             <a href="add-review.html" className="btn movie-card__button">Add review</a>
@@ -64,6 +78,20 @@ MovieCardHero.propTypes = {
     videoLink: PropTypes.string,
     previewVideoLink: PropTypes.string,
   }).isRequired,
+  toggleFavorite: PropTypes.func,
 };
 
-export default MovieCardHero;
+const mapStateToProps = (state, props) => {
+  const {film} = props;
+  return {
+    isFavorite: selectors.films.isFavoriteSelector(state, film.id),
+  };
+};
+
+const mapDispatchToState = (dispatch) => ({
+  toggleFavorite: (filmId, status) => dispatch(operations.user.toggleFavorite(filmId, status))
+});
+
+export {MovieCardHero};
+
+export default connect(mapStateToProps, mapDispatchToState)(MovieCardHero);

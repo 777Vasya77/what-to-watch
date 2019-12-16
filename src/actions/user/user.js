@@ -9,3 +9,18 @@ export const setAuth = (auth) => ({
   type: ActionType.SET_AUTH,
   payload: auth,
 });
+
+export const addFilmToMyList = (film) => ({
+  type: ActionType.ADD_FILM,
+  payload: film,
+});
+
+export const removeFilmToMyList = (film) => ({
+  type: ActionType.REMOVE_FILM,
+  payload: film,
+});
+
+export const initMyListFilms = (films) => ({
+  type: ActionType.INIT_MY_LIST_FILM,
+  payload: films
+});
