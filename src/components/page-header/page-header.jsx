@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {selectors} from '~/selectors/selectors';
 import {Link} from 'react-router-dom';
+import Breadcrumbs from "~/components/breadcrumbs/breadcrumbs";
+import Logo from "~/components/logo/logo";
 
 const PageHeader = (props) => {
-  const {isAuth, authUser} = props;
+  const {isAuth, authUser, breadcrumbs, film} = props;
   return (
     <header className="page-header movie-card__head">
-      <div className="logo">
-        <Link to="/" className="logo__link">
-          <span className="logo__letter logo__letter--1">W</span>
-          <span className="logo__letter logo__letter--2">T</span>
-          <span className="logo__letter logo__letter--3">W</span>
-        </Link>
-      </div>
+      <Logo />
+
+      {breadcrumbs && <Breadcrumbs filmId={film.id} title={film.name}/>}
 
       <div className="user-block">
         {isAuth
@@ -33,7 +31,27 @@ export {PageHeader};
 
 PageHeader.propTypes = {
   isAuth: PropTypes.bool.isRequired,
-  authUser: PropTypes.object
+  authUser: PropTypes.object,
+  film: PropTypes.exact({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    posterImage: PropTypes.string,
+    previewImage: PropTypes.string,
+    backgroundImage: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    description: PropTypes.string,
+    rating: PropTypes.number,
+    scoresCount: PropTypes.number,
+    director: PropTypes.string,
+    starring: PropTypes.arrayOf(PropTypes.string),
+    runTime: PropTypes.number,
+    genre: PropTypes.string,
+    released: PropTypes.number,
+    isFavorite: PropTypes.bool,
+    videoLink: PropTypes.string,
+    previewVideoLink: PropTypes.string,
+  }),
+  breadcrumbs: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({

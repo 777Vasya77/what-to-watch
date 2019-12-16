@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {operations} from "~/operations/oparations";
 import {selectors} from "~/selectors/selectors";
+import {Link} from "react-router-dom";
 
 const MovieCardHero = (props) => {
   const {film, toggleFavorite} = props;
@@ -50,7 +51,7 @@ const MovieCardHero = (props) => {
               }
               <span>My list</span>
             </button>
-            <a href="add-review.html" className="btn movie-card__button">Add review</a>
+            <Link to={`/films/${film.id}/review`} className="btn movie-card__button">Add review</Link>
           </div>
         </div>
       </div>
