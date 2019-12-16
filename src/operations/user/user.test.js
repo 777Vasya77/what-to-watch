@@ -45,5 +45,20 @@ describe(`Films operations tests`, () => {
         expect(dispatch).toBeCalledTimes(0);
       });
   });
+
+  // it(`Should make a correctly API call to /favorite`, () => {
+  //   apiMock
+  //     .onPost(`/favorite`)
+  //     .reply(200, [{film: 1}, {film: 2}]);
+  //
+  //   return login(dispatch, null, api)
+  //     .then(() => {
+  //       expect(dispatch).toBeCalledTimes(2);
+  //       expect(dispatch).toHaveBeenNthCalledWith(1, {
+  //         type: ActionType.SET_AUTH,
+  //         payload: {user: `user`}
+  //       });
+  //     });
+  // });
 });
 

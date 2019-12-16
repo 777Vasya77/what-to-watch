@@ -6,6 +6,10 @@ import Film from '~/models/film';
 
 const film = new Film(FILMS[0]);
 
+jest.mock(`react-router-dom`, () => ({
+  Link: `Link`
+}));
+
 it(`SmallMovieCard component render correctly`, () => {
   const tree = renderer
     .create(
