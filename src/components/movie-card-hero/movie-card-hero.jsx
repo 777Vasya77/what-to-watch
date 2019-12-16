@@ -7,7 +7,7 @@ import {selectors} from "~/selectors/selectors";
 import {Link} from "react-router-dom";
 
 const MovieCardHero = (props) => {
-  const {film, toggleFavorite} = props;
+  const {film, toggleFavorite, isAuth} = props;
 
   const _handlerFavoriteButtonClick = () => {
     const status = (film.isFavorite) ? 0 : 1;
@@ -51,7 +51,7 @@ const MovieCardHero = (props) => {
               }
               <span>My list</span>
             </button>
-            <Link to={`/films/${film.id}/review`} className="btn movie-card__button">Add review</Link>
+            { isAuth && <Link to={`/films/${film.id}/review`} className="btn movie-card__button">Add review</Link>}
           </div>
         </div>
       </div>
@@ -80,11 +80,13 @@ MovieCardHero.propTypes = {
     previewVideoLink: PropTypes.string,
   }).isRequired,
   toggleFavorite: PropTypes.func,
+  isAuth: PropTypes.bool,
 };
 
 const mapStateToProps = (state, props) => {
   const {film} = props;
   return {
+    isAuth: selectors.user.isAuth(state),
     isFavorite: selectors.films.isFavoriteSelector(state, film.id),
   };
 };

@@ -7,6 +7,9 @@ import Film from '~/models/film';
 jest.mock(`~/components/genres-list/genres-list`, () => `genres-list`);
 jest.mock(`~/components/movies-list/movies-list`, () => `movies-list`);
 jest.mock(`~/components/page-header/page-header`, () => `page-header`);
+jest.mock(`react-router-dom`, () => ({
+  Link: `Link`
+}));
 
 it(`MainPage component render correctly`, () => {
   const genres = [`1`, `2`];

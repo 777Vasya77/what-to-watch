@@ -4,6 +4,7 @@ const initialState = {
   auth: null,
   isAuthorizationRequired: false,
   myFilmList: [],
+  myFilmListLoading: false
 };
 
 const user = (state = initialState, action = {}) => {
@@ -19,6 +20,10 @@ const user = (state = initialState, action = {}) => {
     case ActionType.INIT_MY_LIST_FILM:
       return Object.assign({}, state, {
         myFilmList: action.payload
+      });
+    case ActionType.SET_MY_FILM_LIST_LOADING:
+      return Object.assign({}, state, {
+        myFilmListLoading: action.payload
       });
     case ActionType.ADD_FILM:
       return Object.assign({}, state, {

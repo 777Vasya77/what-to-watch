@@ -2,6 +2,10 @@ import React from 'react';
 import {mount} from 'enzyme';
 import SignIn from '~/components/sign-in/sign-in';
 
+jest.mock(`react-router-dom`, () => ({
+  Link: `a`
+}));
+
 describe(`SingIn components e2e test`, () => {
   let wrapper;
   let handlerFormSubmit;

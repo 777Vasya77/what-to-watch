@@ -7,9 +7,15 @@ exports[`PageFooter component tests Component render correctly 1`] = `
   <div
     className="logo"
   >
-    <a
+    <Link
       className="logo__link logo__link--light"
-      href="main.html"
+      style={
+        Object {
+          "borderColor": "unset",
+          "color": "unset",
+        }
+      }
+      to="/"
     >
       <span
         className="logo__letter logo__letter--1"
@@ -26,7 +32,7 @@ exports[`PageFooter component tests Component render correctly 1`] = `
       >
         W
       </span>
-    </a>
+    </Link>
   </div>
   <div
     className="copyright"

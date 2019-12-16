@@ -22,10 +22,12 @@ export const login = (userData) => (dispatch, _, api) => {
 };
 
 export const loadFavoriteFilms = () => (dispatch, getState, api) => {
+  dispatch(actions.user.setFilmListLoading(true));
   return api.get(`/favorite`)
     .then(({data}) => {
       const films = Film.parseFilms(data);
       dispatch(actions.user.initMyListFilms(films));
+      dispatch(actions.user.setFilmListLoading(false));
     });
 };
 

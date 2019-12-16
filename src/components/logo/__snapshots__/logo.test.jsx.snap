@@ -6,6 +6,12 @@ exports[`Logo component tests Component render correctly 1`] = `
 >
   <Link
     className="logo__link logo__link--light"
+    style={
+      Object {
+        "borderColor": "unset",
+        "color": "unset",
+      }
+    }
     to="/"
   >
     <span

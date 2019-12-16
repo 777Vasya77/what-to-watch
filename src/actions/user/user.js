@@ -24,3 +24,8 @@ export const initMyListFilms = (films) => ({
   type: ActionType.INIT_MY_LIST_FILM,
   payload: films
 });
+
+export const setFilmListLoading = (films) => ({
+  type: ActionType.SET_MY_FILM_LIST_LOADING,
+  payload: films
+});

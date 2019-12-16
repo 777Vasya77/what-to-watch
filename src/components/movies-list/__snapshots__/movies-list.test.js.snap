@@ -9,675 +9,900 @@ exports[`MoviesList component tests Component render correctly 1`] = `
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/1"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/1"
+      <div
+        className="small-movie-card__image"
       >
-        Macbeth
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/1"
+        >
+          Macbeth
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/2"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/Once_Upon_a_Time_in_America.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/2"
+      <div
+        className="small-movie-card__image"
       >
-        Once Upon a Time in America
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/Once_Upon_a_Time_in_America.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/2"
+        >
+          Once Upon a Time in America
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/3"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/we-need-to-talk-about-kevin.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/3"
+      <div
+        className="small-movie-card__image"
       >
-        We need to talk about Kevin
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/we-need-to-talk-about-kevin.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/3"
+        >
+          We need to talk about Kevin
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/4"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/dardjeeling_limited.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/4"
+      <div
+        className="small-movie-card__image"
       >
-        Dardjeeling Limited
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/dardjeeling_limited.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/4"
+        >
+          Dardjeeling Limited
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/5"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/5"
+      <div
+        className="small-movie-card__image"
       >
-        War of the Worlds
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/5"
+        >
+          War of the Worlds
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/6"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/6"
+      <div
+        className="small-movie-card__image"
       >
-        Aviator
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/6"
+        >
+          Aviator
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/7"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/7"
+      <div
+        className="small-movie-card__image"
       >
-        Beach
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/7"
+        >
+          Beach
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/8"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/8"
+      <div
+        className="small-movie-card__image"
       >
-        A Star Is Born
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/8"
+        >
+          A Star Is Born
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/9"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/9"
+      <div
+        className="small-movie-card__image"
       >
-        Midnight Special
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/9"
+        >
+          Midnight Special
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/10"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/10"
+      <div
+        className="small-movie-card__image"
       >
-        Matrix
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/10"
+        >
+          Matrix
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/11"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/11"
+      <div
+        className="small-movie-card__image"
       >
-        What We Do in the Shadows
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/11"
+        >
+          What We Do in the Shadows
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/12"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/12"
+      <div
+        className="small-movie-card__image"
       >
-        Johnny English
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/12"
+        >
+          Johnny English
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/13"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/13"
+      <div
+        className="small-movie-card__image"
       >
-        Pulp Fiction
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/13"
+        >
+          Pulp Fiction
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/14"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/14"
+      <div
+        className="small-movie-card__image"
       >
-        Legend
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/14"
+        >
+          Legend
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/15"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/15"
+      <div
+        className="small-movie-card__image"
       >
-        Moonrise Kingdom
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/15"
+        >
+          Moonrise Kingdom
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/16"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/16"
+      <div
+        className="small-movie-card__image"
       >
-        Fantastic Beasts: The Crimes of Grindelwald
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/16"
+        >
+          Fantastic Beasts: The Crimes of Grindelwald
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/17"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/17"
+      <div
+        className="small-movie-card__image"
       >
-        Shutter Island
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/17"
+        >
+          Shutter Island
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/18"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/18"
+      <div
+        className="small-movie-card__image"
       >
-        Gangs of new york
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/18"
+        >
+          Gangs of new york
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/19"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/19"
+      <div
+        className="small-movie-card__image"
       >
-        The Revenant
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/19"
+        >
+          The Revenant
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/20"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/20"
+      <div
+        className="small-movie-card__image"
       >
-        Seven Years in Tibet
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/20"
+        >
+          Seven Years in Tibet
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/21"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg"
-        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/21"
+      <div
+        className="small-movie-card__image"
       >
-        Bronson
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg"
+          src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/21"
+        >
+          Bronson
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/22"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/22"
+      <div
+        className="small-movie-card__image"
       >
-        Orlando
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/22"
+        >
+          Orlando
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/23"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/23"
+      <div
+        className="small-movie-card__image"
       >
-        No Country for Old Men
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/23"
+        >
+          No Country for Old Men
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/24"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/24"
+      <div
+        className="small-movie-card__image"
       >
-        Snatch
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/24"
+        >
+          Snatch
+        </Link>
+      </h3>
+    </Link>
   </article>
   <article
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <Link
+      style={
+        Object {
+          "color": "unset",
+        }
+      }
+      to="/films/25"
     >
-      <video
-        height="175"
-        muted={true}
-        poster="https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg"
-        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <Link
-        className="small-movie-card__link"
-        to="/films/25"
+      <div
+        className="small-movie-card__image"
       >
-        Bohemian Rhapsody
-      </Link>
-    </h3>
+        <video
+          height="175"
+          muted={true}
+          poster="https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width="280"
+        />
+      </div>
+      <h3
+        className="small-movie-card__title"
+      >
+        <Link
+          className="small-movie-card__link"
+          to="/films/25"
+        >
+          Bohemian Rhapsody
+        </Link>
+      </h3>
+    </Link>
   </article>
 </div>
 `;

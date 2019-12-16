@@ -22,7 +22,7 @@ const comment = {
 };
 
 const AddReview = (props) => {
-  const {film, isValid, onChangeIsValid, postComment} = props;
+  const {film, isValid, onChangeIsValid, postComment, history} = props;
 
   const _handleInputChange = (evt) => {
     const target = evt.target;
@@ -46,6 +46,7 @@ const AddReview = (props) => {
     postComment(film.id, comment);
 
     evt.target.reset();
+    history.push(`/films/${film.id}`);
   };
 
   const _commentValidate = (filmComment) => {
@@ -125,6 +126,9 @@ AddReview.propTypes = {
   onChangeIsValid: PropTypes.func,
   isValid: PropTypes.bool,
   postComment: PropTypes.func,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired,
 };
 
 const mapStateToProps = (state, props) => {

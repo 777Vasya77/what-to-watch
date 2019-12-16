@@ -710,9 +710,15 @@ Array [
       <div
         className="logo"
       >
-        <a
+        <Link
           className="logo__link logo__link--light"
-          href="main.html"
+          style={
+            Object {
+              "borderColor": "unset",
+              "color": "unset",
+            }
+          }
+          to="/"
         >
           <span
             className="logo__letter logo__letter--1"
@@ -729,7 +735,7 @@ Array [
           >
             W
           </span>
-        </a>
+        </Link>
       </div>
       <div
         className="copyright"
