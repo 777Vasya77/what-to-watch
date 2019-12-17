@@ -60,6 +60,10 @@ const isFavoriteSelector = (state, filmId) => state.films.filmsList.find((item) 
 
 const getPromoFilmSelector = (state) => state.films.promoFilm;
 
+const isNowFilmPlayingSelector = (state) => Boolean(state.films.playingFilmNow);
+
+const getFilmPlayingNow = (state) => state.films.playingFilmNow;
+
 export const films = {
   loading,
   error,
@@ -75,4 +79,6 @@ export const films = {
   isFavoriteSelector,
   getFavoriteFilmList,
   getPromoFilmSelector,
+  isNowFilmPlayingSelector,
+  getFilmPlayingNow,
 };

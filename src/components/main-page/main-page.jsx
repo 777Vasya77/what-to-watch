@@ -8,7 +8,7 @@ import ShowMore from '~/components/show-more/show-more';
 import {actions} from '~/actions/actions';
 import withActiveItem from '~/hocs/with-active-item/with-active-item';
 import {selectors} from '~/selectors/selectors';
-import MovieCardHero from "~/components/movie-card-hero/movie-card-hero";
+import MovieCardHero from '~/components/movie-card-hero/movie-card-hero';
 
 const MoviesListWrapped = withActiveItem(MoviesList);
 

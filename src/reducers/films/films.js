@@ -9,7 +9,8 @@ const initialState = {
   filmsList: [],
   activeGenreFilter: ALL_GENRES,
   perPage: INIT_FILM_PER_PAGE,
-  promoFilm: null
+  promoFilm: null,
+  playingFilmNow: null
 };
 
 const films = (state = initialState, action = {}) => {
@@ -42,7 +43,10 @@ const films = (state = initialState, action = {}) => {
       return Object.assign({}, state, {
         promoFilm: action.payload
       });
-
+    case ActionType.SET_PLAYING_FILM_NOW:
+      return Object.assign({}, state, {
+        playingFilmNow: action.payload
+      });
     default:
       return state;
   }

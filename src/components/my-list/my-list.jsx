@@ -1,50 +1,41 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Logo from '~/components/logo/logo';
 import PageFooter from '~/components/page-footer/page-footer';
 import UserBlock from '~/components/user-block/user-block';
-import {connect} from "react-redux";
-import {selectors} from "~/selectors/selectors";
-import {operations} from "~/operations/oparations";
-import Loader from "~/components/loader/loader";
-import MoviesList from "~/components/movies-list/movies-list";
+import {connect} from 'react-redux';
+import {selectors} from '~/selectors/selectors';
+import {operations} from '~/operations/oparations';
+import Loader from '~/components/loader/loader';
+import MoviesList from '~/components/movies-list/movies-list';
+import withActiveItem from '~/hocs/with-active-item/with-active-item';
 
-class MyList extends PureComponent {
-  componentDidMount() {
-    const {loadFavoriteFilms, films, isLoading} = this.props;
+const MoviesListWrapped = withActiveItem(MoviesList);
 
-    if (!films.length && !isLoading) {
-      loadFavoriteFilms();
-    }
-  }
+const MyList = (props) => {
+  const {films, isLoading} = props;
+  return (
+    <div className="user-page">
+      <header className="page-header user-page__head">
+        <Logo />
+        <h1 className="page-title user-page__title">My list</h1>
 
-  render() {
-    const {films, isLoading} = this.props;
+        <UserBlock />
+      </header>
 
-    return (
-      <div className="user-page">
-        <header className="page-header user-page__head">
-          <Logo />
-          <h1 className="page-title user-page__title">My list</h1>
+      <section className="catalog">
+        <h2 className="catalog__title visually-hidden">Catalog</h2>
+        {
+          isLoading
+            ? <Loader />
+            : <MoviesListWrapped filmsList={films} />
+        }
+      </section>
 
-          <UserBlock />
-        </header>
-
-        <section className="catalog">
-          <h2 className="catalog__title visually-hidden">Catalog</h2>
-          {
-            isLoading
-              ? <Loader />
-              : <MoviesList filmsList={films} />
-          }
-        </section>
-
-        <PageFooter />
-      </div>
-    );
-  }
-
-}
+      <PageFooter />
+    </div>
+  );
+};
 
 MyList.propTypes = {
   loadFavoriteFilms: PropTypes.func,

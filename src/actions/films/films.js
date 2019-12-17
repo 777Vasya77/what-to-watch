@@ -33,3 +33,8 @@ export const loadPromoFilms = (film) => ({
   type: ActionType.LOAD_PROMO_FILM,
   payload: film
 });
+
+export const setPlayingFilmNow = (film) => ({
+  type: ActionType.SET_PLAYING_FILM_NOW,
+  payload: film
+});

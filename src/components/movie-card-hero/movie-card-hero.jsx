@@ -1,18 +1,23 @@
 import React from 'react';
 import PageHeader from '~/components/page-header/page-header';
 import PropTypes from 'prop-types';
-import {connect} from "react-redux";
-import {operations} from "~/operations/oparations";
-import {selectors} from "~/selectors/selectors";
-import {Link} from "react-router-dom";
+import {connect} from 'react-redux';
+import {operations} from '~/operations/oparations';
+import {selectors} from '~/selectors/selectors';
+import {Link} from 'react-router-dom';
+import {actions} from "~/actions/actions";
 
 const MovieCardHero = (props) => {
-  const {film, toggleFavorite, isAuth, mainPage} = props;
+  const {film, toggleFavorite, isAuth, mainPage, setPlayingFilmNow} = props;
 
   const _handlerFavoriteButtonClick = () => {
     const status = (film.isFavorite) ? 0 : 1;
     film.isFavorite = !film.isFavorite;
     toggleFavorite(film.id, status);
+  };
+
+  const _handlerPlayButtonClick = () => {
+    setPlayingFilmNow(film);
   };
 
   return (
@@ -39,7 +44,7 @@ const MovieCardHero = (props) => {
           </p>
 
           <div className="movie-card__buttons">
-            <button className="btn btn--play movie-card__button" type="button">
+            <button className="btn btn--play movie-card__button" type="button" onClick={_handlerPlayButtonClick}>
               <svg viewBox="0 0 19 19" width="19" height="19">
                 <use xlinkHref="#play-s" />
               </svg>
@@ -87,6 +92,7 @@ MovieCardHero.propTypes = {
   toggleFavorite: PropTypes.func,
   isAuth: PropTypes.bool,
   mainPage: PropTypes.bool,
+  setPlayingFilmNow: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => {
@@ -98,7 +104,8 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToState = (dispatch) => ({
-  toggleFavorite: (filmId, status) => dispatch(operations.user.toggleFavorite(filmId, status))
+  toggleFavorite: (filmId, status) => dispatch(operations.user.toggleFavorite(filmId, status)),
+  setPlayingFilmNow: (film) => dispatch(actions.films.setPlayingFilmNow(film))
 });
 
 export {MovieCardHero};
