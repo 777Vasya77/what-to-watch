@@ -10,6 +10,6 @@ export const init = () => (dispatch) => {
       dispatch(operations.user.checkAuth())
         .then(() => {
           dispatch(actions.general.setAppIsReady(true));
-        });
+        }).catch(() => dispatch(actions.general.setAppIsReady(true)));
     });
 };

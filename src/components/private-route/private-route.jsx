@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Route, Redirect} from 'react-router-dom';
 import {selectors} from '~/selectors/selectors';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import {operations} from "~/operations/oparations";
 
 const PrivateRoute = (props) => {
-  const {component: Component, isAuth, guest} = props;
+  const {component: Component, isAuth, guest, checkAuth} = props;
   const redirectRoute = guest ? `/` : `/login`;
   const rest = Object.assign({}, props);
   delete rest.component;
   delete rest.isAuth;
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   return <Route {...rest}
     render={(routerProps) =>
@@ -27,7 +32,12 @@ PrivateRoute.propTypes = {
   ]).isRequired,
   isAuth: PropTypes.bool.isRequired,
   guest: PropTypes.bool,
+  checkAuth: PropTypes.func,
 };
+
+const mapDispatchToProps = (dispatch) => ({
+  checkAuth: () => dispatch(operations.user.checkAuth())
+});
 
 const mapStateToProps = (state) => ({
   isAuth: selectors.user.isAuth(state)
@@ -35,4 +45,4 @@ const mapStateToProps = (state) => ({
 
 export {PrivateRoute};
 
-export default connect(mapStateToProps)(PrivateRoute);
+export default connect(mapStateToProps, mapDispatchToProps)(PrivateRoute);
