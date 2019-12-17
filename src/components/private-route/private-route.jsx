@@ -5,16 +5,17 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 const PrivateRoute = (props) => {
-  const {component: Component, isAuth} = props;
+  const {component: Component, isAuth, guest} = props;
+  const redirectRoute = guest ? `/` : `/login`;
   const rest = Object.assign({}, props);
   delete rest.component;
   delete rest.isAuth;
 
   return <Route {...rest}
     render={(routerProps) =>
-      isAuth
+      (guest ? !isAuth : isAuth)
         ? (<Component {...routerProps} />)
-        : (<Redirect to="/login" />)
+        : (<Redirect to={redirectRoute} />)
     }
   />;
 };
@@ -25,6 +26,7 @@ PrivateRoute.propTypes = {
     PropTypes.object,
   ]).isRequired,
   isAuth: PropTypes.bool.isRequired,
+  guest: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({

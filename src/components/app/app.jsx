@@ -35,7 +35,7 @@ const App = (props) => {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/login" exact component={() => <SignIn onFormSubmit={onUserLogin}/>} />
+        <PrivateRoute guest path="/login" exact component={() => <SignIn onFormSubmit={onUserLogin}/>} />
         <Route path="/" exact component={() => <MainPage filmsList={filmsList} />} />
         <Route path="/films/:id" exact component={MoviePageWrapped} />
         <PrivateRoute path="/films/:id/review" exact component={withIsValid(AddReview)} />

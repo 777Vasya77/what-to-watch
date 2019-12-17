@@ -9,7 +9,6 @@ export const init = () => (dispatch) => {
     .then(() => {
       dispatch(operations.user.checkAuth())
         .then(() => {
-          dispatch(operations.user.loadFavoriteFilms());
           dispatch(actions.general.setAppIsReady(true));
         });
     });
