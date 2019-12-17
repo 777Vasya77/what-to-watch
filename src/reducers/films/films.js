@@ -8,7 +8,8 @@ const initialState = {
   error: null,
   filmsList: [],
   activeGenreFilter: ALL_GENRES,
-  perPage: INIT_FILM_PER_PAGE
+  perPage: INIT_FILM_PER_PAGE,
+  promoFilm: null
 };
 
 const films = (state = initialState, action = {}) => {
@@ -36,6 +37,10 @@ const films = (state = initialState, action = {}) => {
     case ActionType.LOAD_FILMS:
       return Object.assign({}, state, {
         filmsList: action.payload
+      });
+    case ActionType.LOAD_PROMO_FILM:
+      return Object.assign({}, state, {
+        promoFilm: action.payload
       });
 
     default:

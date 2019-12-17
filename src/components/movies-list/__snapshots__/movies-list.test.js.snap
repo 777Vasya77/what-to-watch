@@ -31,12 +31,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/1"
         >
           Macbeth
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -67,12 +66,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/2"
         >
           Once Upon a Time in America
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -103,12 +101,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/3"
         >
           We need to talk about Kevin
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -139,12 +136,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/4"
         >
           Dardjeeling Limited
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -175,12 +171,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/5"
         >
           War of the Worlds
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -211,12 +206,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/6"
         >
           Aviator
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -247,12 +241,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/7"
         >
           Beach
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -283,12 +276,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/8"
         >
           A Star Is Born
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -319,12 +311,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/9"
         >
           Midnight Special
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -355,12 +346,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/10"
         >
           Matrix
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -391,12 +381,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/11"
         >
           What We Do in the Shadows
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -427,12 +416,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/12"
         >
           Johnny English
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -463,12 +451,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/13"
         >
           Pulp Fiction
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -499,12 +486,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/14"
         >
           Legend
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -535,12 +521,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/15"
         >
           Moonrise Kingdom
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -571,12 +556,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/16"
         >
           Fantastic Beasts: The Crimes of Grindelwald
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -607,12 +591,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/17"
         >
           Shutter Island
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -643,12 +626,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/18"
         >
           Gangs of new york
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -679,12 +661,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/19"
         >
           The Revenant
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -715,12 +696,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/20"
         >
           Seven Years in Tibet
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -751,12 +731,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/21"
         >
           Bronson
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -787,12 +766,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/22"
         >
           Orlando
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -823,12 +801,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/23"
         >
           No Country for Old Men
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -859,12 +836,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/24"
         >
           Snatch
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>
@@ -895,12 +871,11 @@ exports[`MoviesList component tests Component render correctly 1`] = `
       <h3
         className="small-movie-card__title"
       >
-        <Link
+        <span
           className="small-movie-card__link"
-          to="/films/25"
         >
           Bohemian Rhapsody
-        </Link>
+        </span>
       </h3>
     </Link>
   </article>

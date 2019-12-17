@@ -31,7 +31,7 @@ const SmallMovieCard = (props) => {
           />
         </div>
         <h3 className="small-movie-card__title">
-          <Link className="small-movie-card__link" to={`/films/${film.id}`}>{name}</Link>
+          <span className="small-movie-card__link">{name}</span>
         </h3>
       </Link>
     </article>

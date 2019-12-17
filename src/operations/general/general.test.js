@@ -9,7 +9,7 @@ describe(`General operations tests`, () => {
 
     return initOperation(dispatch)
       .then(() => {
-        expect(dispatch).toHaveBeenCalledTimes(3);
+        expect(dispatch).toHaveBeenCalledTimes(4);
       });
 
   });

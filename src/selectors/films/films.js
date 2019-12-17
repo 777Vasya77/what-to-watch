@@ -58,6 +58,8 @@ const getFavoriteFilmList = createSelector(
 
 const isFavoriteSelector = (state, filmId) => state.films.filmsList.find((item) => item.id === +filmId).isFavorite;
 
+const getPromoFilmSelector = (state) => state.films.promoFilm;
+
 export const films = {
   loading,
   error,
@@ -72,4 +74,5 @@ export const films = {
   getSimilarFilmsSelector,
   isFavoriteSelector,
   getFavoriteFilmList,
+  getPromoFilmSelector,
 };

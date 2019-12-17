@@ -7,7 +7,7 @@ import {selectors} from "~/selectors/selectors";
 import {Link} from "react-router-dom";
 
 const MovieCardHero = (props) => {
-  const {film, toggleFavorite, isAuth} = props;
+  const {film, toggleFavorite, isAuth, mainPage} = props;
 
   const _handlerFavoriteButtonClick = () => {
     const status = (film.isFavorite) ? 0 : 1;
@@ -16,7 +16,7 @@ const MovieCardHero = (props) => {
   };
 
   return (
-    <div className="movie-card__hero">
+    <div className={mainPage ? `movie-card` : `movie-card__hero`}>
       <div className="movie-card__bg">
         <img src={film.backgroundImage} alt={film.name} />
       </div>
@@ -25,7 +25,12 @@ const MovieCardHero = (props) => {
 
       <PageHeader />
 
-      <div className="movie-card__wrap">
+      <div className={mainPage ? `movie-card__wrap movie-card__info` : `movie-card__wrap`}>
+
+        {mainPage && <div className="movie-card__poster">
+          <img src={film.posterImage} alt={film.name} width="218" height="327" />
+        </div>}
+
         <div className="movie-card__desc">
           <h2 className="movie-card__title">{film.name}</h2>
           <p className="movie-card__meta">
@@ -81,6 +86,7 @@ MovieCardHero.propTypes = {
   }).isRequired,
   toggleFavorite: PropTypes.func,
   isAuth: PropTypes.bool,
+  mainPage: PropTypes.bool,
 };
 
 const mapStateToProps = (state, props) => {
