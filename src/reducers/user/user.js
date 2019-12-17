@@ -4,6 +4,7 @@ const initialState = {
   auth: null,
   isAuthorizationRequired: false,
   myFilmList: [],
+  myFilmListLoading: false
 };
 
 const user = (state = initialState, action = {}) => {
@@ -20,16 +21,20 @@ const user = (state = initialState, action = {}) => {
       return Object.assign({}, state, {
         myFilmList: action.payload
       });
+    case ActionType.SET_MY_FILM_LIST_LOADING:
+      return Object.assign({}, state, {
+        myFilmListLoading: action.payload
+      });
     case ActionType.ADD_FILM:
       return Object.assign({}, state, {
         myFilmList: state.myFilmList.concat(action.payload)
       });
     case ActionType.REMOVE_FILM:
-      const index = state.myFilmList.findIndex((film) => film.id === action.payload.id);
-      const myList = state.myFilmList.slice(index, 1);
+      const index = state.myFilmList.findIndex((film) => +film.id === +action.payload.id);
+      state.myFilmList.splice(index, 1);
 
       return Object.assign({}, state, {
-        myFilmList: myList
+        myFilmList: state.myFilmList
       });
 
     default:

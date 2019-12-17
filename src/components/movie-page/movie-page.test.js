@@ -12,6 +12,9 @@ const comments = Comment.parseComments(COMMENTS);
 jest.mock(`~/components/movies-list/movies-list`, () => `movies-list`);
 jest.mock(`~/components/page-header/page-header`, () => `page-header`);
 jest.mock(`~/components/movie-card-hero/movie-card-hero`, () => `movie-card-hero`);
+jest.mock(`react-router-dom`, () => ({
+  Link: `Link`
+}));
 
 describe(`MoviePage component tests`, () => {
   it(`Component render correctly`, () => {

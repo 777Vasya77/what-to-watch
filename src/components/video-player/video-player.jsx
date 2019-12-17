@@ -1,16 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const VideoEvent = {
+  TIMEUPDATE: `timeupdate`
+};
+
 const VideoPlayer = (props) => {
-  const {isPlaying, src, previewImage} = props;
+  const {isPlaying, src, previewImage, fullScreenPlayer, updateBar} = props;
   const play = (video) => {
     if (!video) {
       return false;
     }
 
+    if (updateBar) {
+      video.addEventListener(VideoEvent.TIMEUPDATE, updateBar);
+    }
+
     if (isPlaying) {
       video.play();
-    } else if (video.currentTime) {
+    } else if (video.currentTime && fullScreenPlayer) {
+      video.pause();
+    } else {
       video.load();
     }
 
@@ -19,9 +29,10 @@ const VideoPlayer = (props) => {
 
   return (
     <video
+      className="player__video"
       ref={play}
       src={src}
-      muted={true}
+      muted={!fullScreenPlayer}
       poster={previewImage}
       width="280"
       height="175"
@@ -34,6 +45,8 @@ VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired,
   isPlaying: PropTypes.bool.isRequired,
   previewImage: PropTypes.string.isRequired,
+  fullScreenPlayer: PropTypes.bool,
+  updateBar: PropTypes.func,
 };
 
 export default VideoPlayer;

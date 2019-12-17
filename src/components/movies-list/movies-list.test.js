@@ -18,7 +18,11 @@ describe(`MoviesList component tests`, () => {
             filmsList={movies}
             onChangeActiveItem={jest.fn()}
             loading={false}/>,
-          {createNodeMock: () => ({})}
+          {
+            createNodeMock: () => ({
+              load: () => ({})
+            })
+          }
       ).toJSON();
 
     expect(tree).toMatchSnapshot();

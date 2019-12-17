@@ -1,6 +1,9 @@
 import {createSelector} from 'reselect';
 
 const ALL_GENRES = `All genres`;
+const START_INDEX = 0;
+const SIMILAR_FILMS_LIMIT = 4;
+
 
 const filmsSelector = (state) => state.films.filmsList;
 const activeGenreSelector = (state) => state.films.activeGenreFilter;
@@ -48,7 +51,9 @@ const getSimilarFilmsSelector = (state, filmId) => {
   const currentFilm = getFilmById(state, filmId);
   const filmsList = filmsSelector(state);
 
-  return filmsList.filter((film) => film.genre === currentFilm.genre && film.id !== currentFilm.id);
+  const similarFilms = filmsList.filter((film) => film.genre === currentFilm.genre && film.id !== currentFilm.id);
+
+  return similarFilms.slice(START_INDEX, SIMILAR_FILMS_LIMIT);
 };
 
 const getFavoriteFilmList = createSelector(
@@ -57,6 +62,12 @@ const getFavoriteFilmList = createSelector(
 );
 
 const isFavoriteSelector = (state, filmId) => state.films.filmsList.find((item) => item.id === +filmId).isFavorite;
+
+const getPromoFilmSelector = (state) => state.films.promoFilm;
+
+const isNowFilmPlayingSelector = (state) => Boolean(state.films.playingFilmNow);
+
+const getFilmPlayingNow = (state) => state.films.playingFilmNow;
 
 export const films = {
   loading,
@@ -72,4 +83,7 @@ export const films = {
   getSimilarFilmsSelector,
   isFavoriteSelector,
   getFavoriteFilmList,
+  getPromoFilmSelector,
+  isNowFilmPlayingSelector,
+  getFilmPlayingNow,
 };

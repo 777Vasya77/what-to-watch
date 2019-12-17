@@ -27,8 +27,8 @@ describe(`Films operations tests`, () => {
 
     return login(dispatch, null, api)
       .then(() => {
-        expect(dispatch).toBeCalledTimes(2);
-        expect(dispatch).toHaveBeenNthCalledWith(1, {
+        expect(dispatch).toBeCalledTimes(3);
+        expect(dispatch).toHaveBeenNthCalledWith(2, {
           type: ActionType.SET_AUTH,
           payload: {user: `user`}
         });

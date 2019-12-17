@@ -1,12 +1,14 @@
 import React from 'react';
 import PageHeader from '~/components/page-header/page-header';
 import PropTypes from 'prop-types';
-import {connect} from "react-redux";
-import {operations} from "~/operations/oparations";
-import {selectors} from "~/selectors/selectors";
+import {connect} from 'react-redux';
+import {operations} from '~/operations/oparations';
+import {selectors} from '~/selectors/selectors';
+import {Link} from 'react-router-dom';
+import {actions} from "~/actions/actions";
 
 const MovieCardHero = (props) => {
-  const {film, toggleFavorite} = props;
+  const {film, toggleFavorite, isAuth, mainPage, setPlayingFilmNow} = props;
 
   const _handlerFavoriteButtonClick = () => {
     const status = (film.isFavorite) ? 0 : 1;
@@ -14,8 +16,12 @@ const MovieCardHero = (props) => {
     toggleFavorite(film.id, status);
   };
 
+  const _handlerPlayButtonClick = () => {
+    setPlayingFilmNow(film);
+  };
+
   return (
-    <div className="movie-card__hero">
+    <div className={mainPage ? `movie-card` : `movie-card__hero`}>
       <div className="movie-card__bg">
         <img src={film.backgroundImage} alt={film.name} />
       </div>
@@ -24,7 +30,12 @@ const MovieCardHero = (props) => {
 
       <PageHeader />
 
-      <div className="movie-card__wrap">
+      <div className={mainPage ? `movie-card__wrap movie-card__info` : `movie-card__wrap`}>
+
+        {mainPage && <div className="movie-card__poster">
+          <img src={film.posterImage} alt={film.name} width="218" height="327" />
+        </div>}
+
         <div className="movie-card__desc">
           <h2 className="movie-card__title">{film.name}</h2>
           <p className="movie-card__meta">
@@ -33,7 +44,7 @@ const MovieCardHero = (props) => {
           </p>
 
           <div className="movie-card__buttons">
-            <button className="btn btn--play movie-card__button" type="button">
+            <button className="btn btn--play movie-card__button" type="button" onClick={_handlerPlayButtonClick}>
               <svg viewBox="0 0 19 19" width="19" height="19">
                 <use xlinkHref="#play-s" />
               </svg>
@@ -50,7 +61,7 @@ const MovieCardHero = (props) => {
               }
               <span>My list</span>
             </button>
-            <a href="add-review.html" className="btn movie-card__button">Add review</a>
+            { isAuth && <Link to={`/films/${film.id}/review`} className="btn movie-card__button">Add review</Link>}
           </div>
         </div>
       </div>
@@ -79,17 +90,22 @@ MovieCardHero.propTypes = {
     previewVideoLink: PropTypes.string,
   }).isRequired,
   toggleFavorite: PropTypes.func,
+  isAuth: PropTypes.bool,
+  mainPage: PropTypes.bool,
+  setPlayingFilmNow: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => {
   const {film} = props;
   return {
+    isAuth: selectors.user.isAuth(state),
     isFavorite: selectors.films.isFavoriteSelector(state, film.id),
   };
 };
 
 const mapDispatchToState = (dispatch) => ({
-  toggleFavorite: (filmId, status) => dispatch(operations.user.toggleFavorite(filmId, status))
+  toggleFavorite: (filmId, status) => dispatch(operations.user.toggleFavorite(filmId, status)),
+  setPlayingFilmNow: (film) => dispatch(actions.films.setPlayingFilmNow(film))
 });
 
 export {MovieCardHero};

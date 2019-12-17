@@ -6,26 +6,35 @@ exports[`SmallMovieCard component render correctly 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  <div
-    className="small-movie-card__image"
+  <Link
+    style={
+      Object {
+        "color": "unset",
+      }
+    }
+    to="/films/1"
   >
-    <video
-      height="175"
-      muted={true}
-      poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
-      src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
-      width="280"
-    />
-  </div>
-  <h3
-    className="small-movie-card__title"
-  >
-    <Link
-      className="small-movie-card__link"
-      to="/films/1"
+    <div
+      className="small-movie-card__image"
     >
-      Macbeth
-    </Link>
-  </h3>
+      <video
+        className="player__video"
+        height="175"
+        muted={true}
+        poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
+        src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+        width="280"
+      />
+    </div>
+    <h3
+      className="small-movie-card__title"
+    >
+      <span
+        className="small-movie-card__link"
+      >
+        Macbeth
+      </span>
+    </h3>
+  </Link>
 </article>
 `;

@@ -42,4 +42,11 @@ describe(`User action creator work correctly`, () => {
       payload: [{film: 1}]
     });
   });
+
+  it(`Action creator for initMyListFilms return correctly action`, () => {
+    expect(actions.user.setFilmListLoading([{film: 1}])).toEqual({
+      type: ActionType.SET_MY_FILM_LIST_LOADING,
+      payload: [{film: 1}]
+    });
+  });
 });

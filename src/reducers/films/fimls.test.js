@@ -75,4 +75,26 @@ describe(`Films reducer work correctly`, () => {
       ]
     });
   });
+
+  it(`Films reducer should correctly load promo film`, () => {
+    expect(films({
+      promoFilm: null
+    }, {
+      type: ActionType.LOAD_PROMO_FILM,
+      payload: {film: `1`}
+    })).toEqual({
+      promoFilm: {film: `1`}
+    });
+  });
+
+  it(`Films reducer should correctly set playing film now`, () => {
+    expect(films({
+      playingFilmNow: null
+    }, {
+      type: ActionType.SET_PLAYING_FILM_NOW,
+      payload: {film: `1`}
+    })).toEqual({
+      playingFilmNow: {film: `1`}
+    });
+  });
 });

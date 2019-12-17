@@ -4,6 +4,7 @@ import history from '~/history';
 import {Route} from '~/api/api';
 import {selectors} from "~/selectors/selectors";
 import Film from "~/models/film";
+import {operations} from "~/operations/oparations";
 
 export const login = (userData) => (dispatch, _, api) => {
   return api.post(Route.LOGIN, userData)
@@ -14,6 +15,7 @@ export const login = (userData) => (dispatch, _, api) => {
 
       const user = User.parseUser(data);
 
+      dispatch(operations.user.loadFavoriteFilms());
       dispatch(actions.user.setAuth(user));
       dispatch(actions.user.requireAuthorization(false));
 
@@ -21,11 +23,28 @@ export const login = (userData) => (dispatch, _, api) => {
     });
 };
 
+export const checkAuth = () => (dispatch, _, api) => {
+  return api.get(Route.LOGIN)
+    .then(({data}) => {
+      if (!data) {
+        return;
+      }
+
+      const user = User.parseUser(data);
+
+      dispatch(operations.user.loadFavoriteFilms());
+      dispatch(actions.user.setAuth(user));
+      dispatch(actions.user.requireAuthorization(false));
+    });
+};
+
 export const loadFavoriteFilms = () => (dispatch, getState, api) => {
+  dispatch(actions.user.setFilmListLoading(true));
   return api.get(`/favorite`)
     .then(({data}) => {
       const films = Film.parseFilms(data);
       dispatch(actions.user.initMyListFilms(films));
+      dispatch(actions.user.setFilmListLoading(false));
     });
 };
 

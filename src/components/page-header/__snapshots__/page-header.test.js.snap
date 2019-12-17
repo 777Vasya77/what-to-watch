@@ -8,7 +8,13 @@ exports[`PageHeader component tests Component render correctly 1`] = `
     className="logo"
   >
     <Link
-      className="logo__link"
+      className="logo__link logo__link--light"
+      style={
+        Object {
+          "borderColor": "unset",
+          "color": "unset",
+        }
+      }
       to="/"
     >
       <span
@@ -28,14 +34,6 @@ exports[`PageHeader component tests Component render correctly 1`] = `
       </span>
     </Link>
   </div>
-  <div
-    className="user-block"
-  >
-    <Link
-      to="/login"
-    >
-      Sign In
-    </Link>
-  </div>
+  <user-block />
 </header>
 `;

@@ -2,9 +2,14 @@ import {operations} from '~/operations/oparations';
 import {actions} from '~/actions/actions';
 
 export const init = () => (dispatch) => {
-  return dispatch(operations.films.loadFilms())
+  const loadPromoFilm = dispatch(operations.films.loadPromoFilm());
+  const loadFilmsList = dispatch(operations.films.loadFilms());
+
+  return Promise.all([loadPromoFilm, loadFilmsList])
     .then(() => {
-      dispatch(operations.user.loadFavoriteFilms());
-      dispatch(actions.general.setAppIsReady(true));
+      dispatch(operations.user.checkAuth())
+        .then(() => {
+          dispatch(actions.general.setAppIsReady(true));
+        });
     });
 };
