@@ -2,6 +2,7 @@
 
 exports[`VideoPlayer component tests Component render correctly 1`] = `
 <video
+  className="player__video"
   height="175"
   muted={true}
   poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"

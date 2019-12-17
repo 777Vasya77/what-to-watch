@@ -15,7 +15,11 @@ describe(`VideoPlayer component tests`, () => {
           isPlaying={false}
           previewImage={previewImage}
         />,
-        {createNodeMock: () => ({})}
+        {
+          createNodeMock: () => ({
+            load: () => ({})
+          })
+        }
     );
 
     expect(tree).toMatchSnapshot();

@@ -21,6 +21,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"
@@ -56,6 +57,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/Once_Upon_a_Time_in_America.jpg"
@@ -91,6 +93,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/we-need-to-talk-about-kevin.jpg"
@@ -126,6 +129,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/dardjeeling_limited.jpg"
@@ -161,6 +165,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/war-of-the-worlds.jpg"
@@ -196,6 +201,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/aviator.jpg"
@@ -231,6 +237,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/beach.jpg"
@@ -266,6 +273,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/A_Star_Is_Born.jpg"
@@ -301,6 +309,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/midnight-special.jpg"
@@ -336,6 +345,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/matrix.jpg"
@@ -371,6 +381,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/what-we-do-in-the-shadows.jpg"
@@ -406,6 +417,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/johnny-english.jpg"
@@ -441,6 +453,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/pulp-fiction.jpg"
@@ -476,6 +489,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/legend.jpg"
@@ -511,6 +525,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/moonrise-kingdom.jpg"
@@ -546,6 +561,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg"
@@ -581,6 +597,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/shutter-island.jpg"
@@ -616,6 +633,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/gangs_of_new_york.jpg"
@@ -651,6 +669,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/revenant.jpg"
@@ -686,6 +705,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
@@ -721,6 +741,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/bronson.jpg"
@@ -756,6 +777,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/orlando.jpg"
@@ -791,6 +813,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/no-country-for-old-men.jpg"
@@ -826,6 +849,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/snatch.jpg"
@@ -861,6 +885,7 @@ exports[`MoviesList component tests Component render correctly 1`] = `
         className="small-movie-card__image"
       >
         <video
+          className="player__video"
           height="175"
           muted={true}
           poster="https://es31-server.appspot.com/wtw/static/film/preview/bohemian_rhapsody.jpg"

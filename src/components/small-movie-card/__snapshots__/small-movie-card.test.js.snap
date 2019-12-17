@@ -18,6 +18,7 @@ exports[`SmallMovieCard component render correctly 1`] = `
       className="small-movie-card__image"
     >
       <video
+        className="player__video"
         height="175"
         muted={true}
         poster="https://es31-server.appspot.com/wtw/static/film/preview/macbeth.jpg"

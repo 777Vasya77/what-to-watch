@@ -18,7 +18,11 @@ it(`SmallMovieCard component render correctly`, () => {
           onMovieCardMouseEnter={() => {}}
           onMovieCardMouseLeave={() => {}}
           isPlaying={false}/>,
-        {createNodeMock: () => ({})}
+        {
+          createNodeMock: () => ({
+            load: () => ({})
+          })
+        }
     ).toJSON();
 
   expect(tree).toMatchSnapshot();
