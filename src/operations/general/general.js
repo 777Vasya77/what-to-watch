@@ -7,8 +7,10 @@ export const init = () => (dispatch) => {
 
   return Promise.all([loadPromoFilm, loadFilmsList])
     .then(() => {
-      dispatch(operations.user.loadFavoriteFilms());
-      dispatch(actions.general.setAppIsReady(true));
+      dispatch(operations.user.checkAuth())
+        .then(() => {
+          dispatch(operations.user.loadFavoriteFilms());
+          dispatch(actions.general.setAppIsReady(true));
+        });
     });
-
 };

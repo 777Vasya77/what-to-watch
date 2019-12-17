@@ -21,6 +21,20 @@ export const login = (userData) => (dispatch, _, api) => {
     });
 };
 
+export const checkAuth = () => (dispatch, _, api) => {
+  return api.get(Route.LOGIN)
+    .then(({data}) => {
+      if (!data) {
+        return;
+      }
+
+      const user = User.parseUser(data);
+
+      dispatch(actions.user.setAuth(user));
+      dispatch(actions.user.requireAuthorization(false));
+    });
+};
+
 export const loadFavoriteFilms = () => (dispatch, getState, api) => {
   dispatch(actions.user.setFilmListLoading(true));
   return api.get(`/favorite`)
