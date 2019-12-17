@@ -47,8 +47,6 @@ const createApi = (dispatch) => {
       }
 
       case Status.UNAUTHORIZED: {
-        const {error = `Unauthorized`} = err.response.data;
-        fireError(error);
         history.push(Route.LOGIN);
         break;
       }
