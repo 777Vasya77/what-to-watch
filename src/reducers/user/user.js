@@ -30,11 +30,11 @@ const user = (state = initialState, action = {}) => {
         myFilmList: state.myFilmList.concat(action.payload)
       });
     case ActionType.REMOVE_FILM:
-      const index = state.myFilmList.findIndex((film) => film.id === action.payload.id);
-      const myList = state.myFilmList.slice(index, 1);
+      const index = state.myFilmList.findIndex((film) => +film.id === +action.payload.id);
+      state.myFilmList.splice(index, 1);
 
       return Object.assign({}, state, {
-        myFilmList: myList
+        myFilmList: state.myFilmList
       });
 
     default:

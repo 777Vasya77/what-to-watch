@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserBlock component tests Component render correctly 1`] = `
+<div
+  className="user-block"
+>
+  <div
+    className="user-block__avatar"
+  >
+    <Link
+      to="/mylist"
+    >
+      <img
+        height="63"
+        width="63"
+      />
+    </Link>
+  </div>
+</div>
+`;

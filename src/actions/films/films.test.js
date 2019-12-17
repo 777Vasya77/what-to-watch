@@ -48,4 +48,22 @@ describe(`Films action creator work correctly`, () => {
       payload: [{film: 1}]
     });
   });
+
+  it(`Action creator for load promo film return correctly action`, () => {
+    expect(actions.films.loadPromoFilms([
+      {film: 1}
+    ])).toEqual({
+      type: ActionType.LOAD_PROMO_FILM,
+      payload: [{film: 1}]
+    });
+  });
+
+  it(`Action creator for setPlayingFilmNow return correctly action`, () => {
+    expect(actions.films.setPlayingFilmNow([
+      {film: 1}
+    ])).toEqual({
+      type: ActionType.SET_PLAYING_FILM_NOW,
+      payload: [{film: 1}]
+    });
+  });
 });

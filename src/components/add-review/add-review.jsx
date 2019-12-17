@@ -135,7 +135,6 @@ const mapStateToProps = (state, props) => {
   const filmId = props.match.params.id;
 
   return {
-
     film: selectors.films.getFilmById(state, filmId),
   };
 };
