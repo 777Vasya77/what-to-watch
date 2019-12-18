@@ -23,7 +23,7 @@ const GenresList = ({genres, activeGenreFilter, onGenreLinkClick, loading}) => {
 };
 
 GenresList.propTypes = {
-  genres: PropTypes.array.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string),
   activeGenreFilter: PropTypes.string.isRequired,
   onGenreLinkClick: PropTypes.func.isRequired,
   loading: PropTypes.bool,

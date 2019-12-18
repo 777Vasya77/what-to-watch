@@ -35,12 +35,12 @@ PrivateRoute.propTypes = {
   checkAuth: PropTypes.func,
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  checkAuth: () => dispatch(operations.user.checkAuth())
-});
-
 const mapStateToProps = (state) => ({
   isAuth: selectors.user.isAuth(state)
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  checkAuth: () => dispatch(operations.user.checkAuth())
 });
 
 export {PrivateRoute};

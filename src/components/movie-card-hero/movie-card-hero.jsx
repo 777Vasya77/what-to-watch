@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 import {actions} from "~/actions/actions";
 
 const MovieCardHero = (props) => {
-  const {film, toggleFavorite, isAuth, mainPage, setPlayingFilmNow} = props;
+  const {film, toggleFavorite, isAuth, mainPage, onSetPlayingFilmNow} = props;
 
   const _handlerFavoriteButtonClick = () => {
     const status = (film.isFavorite) ? 0 : 1;
@@ -17,7 +17,7 @@ const MovieCardHero = (props) => {
   };
 
   const _handlerPlayButtonClick = () => {
-    setPlayingFilmNow(film);
+    onSetPlayingFilmNow(film);
   };
 
   return (
@@ -92,7 +92,7 @@ MovieCardHero.propTypes = {
   toggleFavorite: PropTypes.func,
   isAuth: PropTypes.bool,
   mainPage: PropTypes.bool,
-  setPlayingFilmNow: PropTypes.func,
+  onSetPlayingFilmNow: PropTypes.func,
 };
 
 const mapStateToProps = (state, props) => {
@@ -105,7 +105,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToState = (dispatch) => ({
   toggleFavorite: (filmId, status) => dispatch(operations.user.toggleFavorite(filmId, status)),
-  setPlayingFilmNow: (film) => dispatch(actions.films.setPlayingFilmNow(film))
+  onSetPlayingFilmNow: (film) => dispatch(actions.films.setPlayingFilmNow(film))
 });
 
 export {MovieCardHero};

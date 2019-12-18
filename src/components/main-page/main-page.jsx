@@ -71,7 +71,7 @@ const filmValidateRules = {
 
 MainPage.propTypes = {
   filmsList: PropTypes.arrayOf(PropTypes.exact(filmValidateRules)).isRequired,
-  genres: PropTypes.array.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
   activeGenreFilter: PropTypes.string.isRequired,
   onGenreLinkClick: PropTypes.func.isRequired,
   onShowMoreClick: PropTypes.func.isRequired,
@@ -79,19 +79,19 @@ MainPage.propTypes = {
   promoFilm: PropTypes.exact(filmValidateRules).isRequired,
 };
 
+const mapStateToProps = (state) => ({
+  genres: selectors.films.genresSelector(state),
+  activeGenreFilter: selectors.films.activeGenreSelector(state),
+  isAllFilmsLoaded: selectors.films.isAllFilmsLoadedSelector(state),
+  promoFilm: selectors.films.getPromoFilmSelector(state),
+});
+
 const mapDispatchToProps = (dispatch) => ({
   onGenreLinkClick: (filter) => {
     dispatch(actions.films.setGenreFilter(filter));
     dispatch(actions.films.resetFilmsPerPage());
   },
   onShowMoreClick: (perPage) => dispatch(actions.films.setFilmsPerPage(perPage))
-});
-
-const mapStateToProps = (state) => ({
-  genres: selectors.films.genresSelector(state),
-  activeGenreFilter: selectors.films.activeGenreSelector(state),
-  isAllFilmsLoaded: selectors.films.isAllFilmsLoadedSelector(state),
-  promoFilm: selectors.films.getPromoFilmSelector(state),
 });
 
 export {MainPage};

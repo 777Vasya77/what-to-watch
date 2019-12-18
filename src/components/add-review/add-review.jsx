@@ -20,6 +20,10 @@ const comment = {
   rating: -1,
   text: ``
 };
+const CommentTarget = {
+  RATING: `rating`,
+  REVIEW_TEXT: `review-text`
+};
 
 const AddReview = (props) => {
   const {film, isValid, onChangeIsValid, postComment, history} = props;
@@ -28,11 +32,11 @@ const AddReview = (props) => {
     const target = evt.target;
     const value = target.value;
 
-    if (target.name === `rating`) {
+    if (target.name === CommentTarget.RATING) {
       comment.rating = Number(value);
     }
 
-    if (target.name === `review-text`) {
+    if (target.name === CommentTarget.REVIEW_TEXT) {
       comment.text = value;
     }
 
